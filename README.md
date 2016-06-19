@@ -1,6 +1,6 @@
 ## Radiant: Business analytics using R and Shiny
 
-`miniCRAN` repo for Radiant package dependencies. Source code for Radiant is available at http://radiant-rstats.github.io/docs. Documentation is available at http://radiant-rstats.github.io/docs
+`miniCRAN` repo for Radiant package dependencies. Source code for Radiant is available at https://github.com/radiant-rstats. Documentation is available at http://radiant-rstats.github.io/docs
 
 ### License
 
