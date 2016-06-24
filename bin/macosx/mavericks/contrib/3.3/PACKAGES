@@ -1,9 +1,31 @@
+Package: DiagrammeR
+Version: 0.8.3
+Imports: htmlwidgets (>= 0.6), rstudioapi (>= 0.5), stringr (>= 1.0.0), visNetwork (>= 0.1.2), scales (>= 0.4.0), rsvg (>= 0.5)
+Suggests: knitr, testthat
+License: MIT + file LICENSE
+MD5sum: e1b77f1f4932c75b3db9046b1d2aeca9
+
+Package: DT
+Version: 0.1.56
+Imports: htmltools (>= 0.3.5), htmlwidgets (>= 0.6), magrittr
+Suggests: jsonlite (>= 0.9.16), knitr (>= 1.8), rmarkdown, shiny (>= 0.12.1)
+License: GPL-3 | file LICENSE
+MD5sum: 52fe309c615f9f208c1a08c50e8d1b9e
+
+Package: NeuralNetTools
+Version: 1.4.0
+Depends: R (>= 3.1.1)
+Imports: ggplot2 (>= 2.0.0), nnet, reshape2, scales, tidyr
+Suggests: caret, neuralnet, RSNNS
+License: CC0
+MD5sum: 9638178179353c9ceded463c0e4a5851
+
 Package: radiant
 Version: 0.1.0
 Depends: R (>= 3.2.0), radiant.data (>= 0.5), radiant.design (>= 0.1), radiant.basics (>= 0.1), radiant.model (>= 0.1), radiant.multivariate (>= 0.1)
 Imports: psych (>= 1.5.8), AlgDesign (>= 1.1.7.3), shiny (>= 0.13.2.9003), import (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 2e237013bc4b681e5b6c31bdbbe6bf02
+MD5sum: 20c0e92f6dbec9741599bede53b781c0
 
 Package: radiant.basics
 Version: 0.1.0
@@ -12,7 +34,7 @@ Imports: ggplot2 (>= 2.0.0), gridExtra (>= 2.0.0), scales (>= 0.3.0), dplyr (>= 
                     1.5.8), import (>= 1.1.0), methods
 Suggests: devtools (>= 1.8.0), testthat (>= 0.10.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 4d2cd8c656e901fb943f59ab625317da
+MD5sum: 8f6dbe27be9d0822d4aec8111e222f4e
 
 Package: radiant.data
 Version: 0.5
@@ -22,14 +44,14 @@ Imports: broom (>= 0.4.0), car (>= 2.1.1), gridExtra (>= 2.0.0), knitr (>= 1.13)
                     base64enc, methods
 Suggests: devtools (>= 1.8.0), testthat (>= 0.10.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 2c1af72360adad34650e2a8060a32e12
+MD5sum: 967ec47dc6d22cd9200bf0fca09ff7ae
 
 Package: radiant.design
 Version: 0.1.0
 Depends: R (>= 3.2.0), radiant.data (>= 0.5)
 Imports: dplyr (>= 0.4.3), broom (>= 0.4.0), shiny (>= 0.13.2.9003), AlgDesign (>= 1.1.7.3), import (>= 1.1.0), methods
 License: AGPL-3 | file LICENSE
-MD5sum: 188f488c4738c4dcf2cbb6c291357a9f
+MD5sum: 76e38db45e35775eb5bb9cf5ef296ccd
 
 Package: radiant.model
 Version: 0.1.0
@@ -39,7 +61,7 @@ Imports: radiant.basics (>= 0.1), shiny (>= 0.13.2.9003), nnet (>= 7.3.11), Neur
                     magrittr (>= 1.5), DiagrammeR(>= 0.8.3), import (>= 1.1.0), methods
 Suggests: devtools (>= 1.8.0), testthat (>= 0.10.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
-MD5sum: c7dc8fdb31b3ab2adc15eeef6c0d0b28
+MD5sum: d5e76efa1d6f3895c6f2492204309bea
 
 Package: radiant.multivariate
 Version: 0.1.0
@@ -48,5 +70,13 @@ Imports: shiny (>= 0.13.2.9003), dplyr (>= 0.4.3), ggplot2 (>= 2.0.0), gridExtra
                     2.1.1), MASS (>= 7.3), wordcloud (>= 2.5), import (>= 1.1.0), methods
 Suggests: devtools (>= 1.8.0), testthat (>= 0.10.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 68cbe000d1a65209cd4c674b64a06db8
+MD5sum: 2a4989722bcf5d4e3ef7320040ba9dc1
+
+Package: shiny
+Version: 0.13.2.9004
+Depends: R (>= 3.0.0), methods
+Imports: utils, httpuv (>= 1.3.3), mime (>= 0.3), jsonlite (>= 0.9.16), xtable, digest, htmltools (>= 0.3.5), R6 (>= 2.0), sourcetools
+Suggests: datasets, Cairo (>= 1.5-5), testthat, knitr (>= 1.6), markdown, rmarkdown, ggplot2
+License: GPL-3 | file LICENSE
+MD5sum: 76260997cba1135aaf3813a0436aaf77
 
