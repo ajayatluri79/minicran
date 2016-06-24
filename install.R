@@ -10,7 +10,7 @@ build <- function() {
 rv <- R.Version()
 
 if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
-  stop("Radiant requires R-3.3.0 or later. Please install the latest version of R from https://cloud.r-project.org/")
+  cat("Radiant requires R-3.3.0 or later. Please install the latest version of R from https://cloud.r-project.org/")
 } else {
 
 	os <- Sys.info()["sysname"]
@@ -18,7 +18,7 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 	if (os == "Windows") {
 		if (grepl("(Prog)|(PROG)", Sys.getenv("R_HOME"))) {
 	    rv <- paste(rv$major, rv$minor, sep = ".")
-			stop(paste0("It seems you installed R in the Program Files directory. Please uninstall R and re-install into C:\\R\\R-",rv))
+			cat(paste0("It seems you installed R in the Program Files directory. Please uninstall R and re-install into C:\\R\\R-",rv))
 		} else {
 			build()
 			install.packages("installr")
@@ -47,7 +47,7 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 		}
 		cat("Installation on Mac complete. Start Rstudio and select Radiant from the Addins menu to get started")
 	} else {
-		stop("Your OS is not currently supported")
+		cat("Your OS is not currently supported")
 	}
 }
 
