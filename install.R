@@ -25,7 +25,8 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 			installr::install.rstudio()
 			installr::install.Rtools()
 
-		  inp <- readline("To generate PDF reports in Radiant you will need MikTex. This is large download (approx 100MB). Proceed with the install? y/n ")
+		  cat"To generate PDF reports in Radiant you will need MicTex. This is a large download (approx 100MB).")
+		  inp <- readline("Proceed with the install? y/n ")
 		  if (inp %in% c("y","yes","Yes","yes","YES")) {
 			  ver <- if (grepl("64",Sys.getenv()["PROCESSOR_IDENTIFIER"])) 64 else 32
 			  installr::install.MikTex(ver)
@@ -40,7 +41,8 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 		download.file("https://download1.rstudio.org/RStudio-0.99.902.dmg","Rstudio.dmg")
 		system("open RStudio.dmg")
 
-		inp <- readline("To generate PDF reports in Radiant you will need MacTex. This is a larger download (approx 2GB). Proceed with the install? y/n ")
+		cat"To generate PDF reports in Radiant you will need MacTex. This is a large download (approx 2GB).")
+		inp <- readline("Proceed with the install? y/n ")
 		if (inp %in% c("y","yes","Yes","yes","YES")) {
 			download.file("http://tug.org/cgi-bin/mactex-download/MacTeX.pkg", "MacTex.pkg")
 			system("open MacTex.pkg")
