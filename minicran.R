@@ -1,98 +1,35 @@
 ###############################################################
 ### RUN OUTSIDE OF RADIANT
 ###############################################################
-
-# is local_dir is not in the library path (e.g., when usig brew in mac)
-local_dir <- Sys.getenv("R_LIBS_USER")
-if (!file.exists(local_dir)) {
-	dir.create(local_dir, recursive = TRUE)
-	.libPaths(local_dir)
-}
-
-local_dir <- .libPaths()[1]
-global_dir <- .libPaths()[2]
-# local_dir
-# global_dir
-
-# installing packages to global_dir
+# installing and loading packages
 repos <- "http://cran.rstudio.com"
 options(repos = c(CRAN = repos))
 
-# remove.packages('devtools', global_dir)
-# install.packages("devtools", lib = global_dir)
+#install.packages("devtools")
 library(devtools)
-# devtools::install_github("andrie/miniCRAN@dev")
-# install.packages("miniCRAN", lib = global_dir)
-# install.packages("miniCRAN")
-# install.packages("rmarkdown", lib = global_dir)
+#install.packages("miniCRAN")
 library(miniCRAN)
-# install.packages("miniCRAN")
 
-# Specify list of packages to download
-# source('~/gh/radiant_miniCRAN/pkgs.R')
+repos <- c("https://radiant-rstats.github.io/minicran/", "https://cloud.r-project.org")
+options(repos = c(CRAN = repos))
 
-# devtools::source_url("https://raw.githubusercontent.com/mostly-harmless/radiant_miniCRAN/gh-pages/pkgs.R")
-
-# cleanup to start
-# for (i in pkgs_all)
-# 	remove.packages(i, lib = local_dir)
-#
-# for (i in pkgs_all)
-# 	remove.packages(i, lib = global_dir)
-
-# install github packages locally
-# from http://stackoverflow.com/questions/24646065/how-to-specify-lib-directory-when-installing-development-version-r-packages-from
-# installing radiant from github (with dependencies - hopefully :) )
-# for (i in pkgs_ghrepos)
-# 	with_libpaths(new = local_dir, install_github(i))
-
-# create the local / github repo based on radiant's dependencies
-# gh_repos <- "http://mostly-harmless.github.io/radiant_miniCRAN/"
-# pkgs <- "radiant"
-# pkgList <- pkgDep(pkgs, repos=gh_repos, type="source", suggests = FALSE)
-# str(pkgList)
-# pkgList[order(pkgList)]
-
-# building the gh packages is now done in build_mac_win.sh
-# library(miniCRAN)
-# repos <- "http://cran.rstudio.com"
-# options(repos = c(CRAN = repos))
-
-# pth <- "~/gh/radiant_miniCRAN"
-# pkgs_cran = c("htmlwidgets")
-# pkgs_cran = c("radiant")
-# pkgs_cran = c("radiant", "shiny", "dplyr", "DT")
-# pkgs_cran = c("shiny", "dplyr", "DT", "readr", "rmarkdown")
-# pkgs_cran = c("DiagrammeR")
-# pkgs_cran = c("radiant")
-# repos <- "http://cran.rstudio.com"
-
-# options(repos = c(CRAN = repos))
-pth <- "~/gh/radiant_miniCRAN"
-pkgs_cran = c('knitr','import','shiny')
-pkgs_cran = c('sourcetools')
-# pkgs_cran = c("readr")
-# repos <- "http://vnijs.github.io/radiant_miniCRAN/"
-# repos <- c("https://vnijs.github.io/radiant_miniCRAN/", "https://cran.rstudio.com")
-# repos <- "http://cran.rstudio.com"
-repos <- "https://cloud.r-project.org"
-# install.packages("miniCRAN")
-# library(miniCRAN)
+pth <- "~/gh/minicran"
+pkgs = c("radiant.data")
 
 # building minicran for source packages
-pkgList <- pkgDep(pkgs_cran, repos = repos, type = "source", suggests = FALSE)
+pkgList <- pkgDep(pkgs, repos = repos, type = "source", suggests = FALSE)
 makeRepo(pkgList, path = pth, type = "source")
 
 # building minicran for windows binaries
-pkgList <- pkgDep(pkgs_cran, repos = repos, type = "win.binary", suggests = FALSE)
+pkgList <- pkgDep(pkgs, repos = repos, type = "win.binary", suggests = FALSE)
 makeRepo(pkgList, path = pth, type = "win.binary")
 
 # building minicran for mac binaries
-pkgList <- pkgDep(pkgs_cran, repos = repos, type = "mac.binary", suggests = FALSE)
+pkgList <- pkgDep(pkgs, repos = repos, type = "mac.binary", suggests = FALSE)
 makeRepo(pkgList, path = pth, type = "mac.binary")
 
 # building minicran for mac mavericks binaries
-pkgList <- pkgDep(pkgs_cran, repos = repos, type = "mac.binary.mavericks", suggests = FALSE)
+pkgList <- pkgDep(pkgs, repos = repos, type = "mac.binary.mavericks", suggests = FALSE)
 makeRepo(pkgList, path = pth, type = "mac.binary.mavericks")
 
 library(dplyr)
