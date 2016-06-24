@@ -2,7 +2,7 @@
 ### RUN OUTSIDE OF RADIANT
 ###############################################################
 # installing and loading packages
-repos <- "http://cran.rstudio.com"
+repos <- "https://cran.rstudio.com"
 options(repos = c(CRAN = repos))
 
 #install.packages("devtools")

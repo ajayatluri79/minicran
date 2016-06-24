@@ -3,7 +3,7 @@ options(repos = c(CRAN = repos))
 
 build <- function() {
 	install.packages("radiant", repos = "https://radiant-rstats.github.io/minicran/", type = 'binary')
-	install.packages("webshot", repos = "http://cran.rstudio.com", type = "binary")
+	install.packages("webshot", repos = "https://cran.rstudio.com", type = "binary")
 	if (Sys.which("phantomjs") == "") eval(parse(text = "webshot::install_phantomjs()"))
 }
 
