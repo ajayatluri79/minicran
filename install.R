@@ -14,8 +14,7 @@ if (os == "Windows") {
 		install.packages("installr")
 	  installr::install.miktex(ver)
 		installr::install.rstudio()
-		ver <- if (grepl("64",Sys.getenv()["PROCESSOR_IDENTIFIER"])) 64 else 32
-		installr::install.MikTek(ver)
+		installr::install.MikTex(if (grepl("64",Sys.getenv()["PROCESSOR_IDENTIFIER"])) 64 else 32)
 		installr::install.Rtools()
 	}
 } else if (os == "Darwin") {
