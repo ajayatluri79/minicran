@@ -16,7 +16,7 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 	os <- Sys.info()["sysname"]
 
 	if (os == "Windows") {
-		if (grepl("Pr", Sys.getenv("R_HOME"))) {
+		if (grepl("(Prog)|(PROG)", Sys.getenv("R_HOME"))) {
 	    rv <- paste(rv$major, rv$minor, sep = ".")
 			stop(paste0("It seems you installed R in the Program Files directory. Please uninstall R and re-install into C:\\R\\R-",rv))
 		} else {
