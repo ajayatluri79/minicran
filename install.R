@@ -25,7 +25,7 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 			installr::install.rstudio()
 			installr::install.Rtools()
 
-		  cat"To generate PDF reports in Radiant you will need MicTex. This is a large download (approx 100MB).")
+		  cat("To generate PDF reports in Radiant you will need MicTex. This is a large download (approx 100MB).")
 		  inp <- readline("Proceed with the install? y/n ")
 		  if (inp %in% c("y","yes","Yes","yes","YES")) {
 			  ver <- if (grepl("64",Sys.getenv()["PROCESSOR_IDENTIFIER"])) 64 else 32
