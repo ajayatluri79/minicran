@@ -20,6 +20,7 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 	    rv <- paste(rv$major, rv$minor, sep = ".")
 			cat(paste0("It seems you installed R in the Program Files directory. Please uninstall R and re-install into C:\\R\\R-",rv))
 		} else {
+
 			build()
 			install.packages("installr")
 			installr::install.rstudio()
@@ -29,10 +30,15 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 		  inp <- readline("Proceed with the install? y/n ")
 		  if (inp %in% c("y","yes","Yes","yes","YES")) {
 			  ver <- if (grepl("64",Sys.getenv()["PROCESSOR_IDENTIFIER"])) 64 else 32
-			  installr::install.MikTeX(ver)
+			  installr::install.miktex(ver)
+		# 	  if (ver == 32) {
+		# 	  	download.file("http://mirrors.ctan.org/systems/win32/miktex/setup/basic-miktex-2.9.5997.exe","miktex.exe")
+		# 	  } else {
+		# 	  	download.file("http://mirrors.ctan.org/systems/win32/miktex/setup/basic-miktex-2.9.5997-x64.ex","miktex.exe")
+		# 	  }
+		#     system("open miktex.exe")
 			}
 		}
-
 		cat("Installation on Windows complete. Start Rstudio and select Radiant from the Addins menu to get started")
 	} else if (os == "Darwin") {
 		build()
