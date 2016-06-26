@@ -24,7 +24,7 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 
 			cat(paste0("Please remove the directory printed below and run the script again.\nInstalling packages in this directory often causes problems on Windows\n\n"))
 
-		  cat(paste0(lp, collapse = "\n"))
+		  cat(paste0(lp, collapse = "\n"),"\n\n")
 	  } else {
 
 			build()
@@ -37,15 +37,16 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 		  if (inp %in% c("y","yes","Yes","yes","YES")) {
 			  ver <- if (grepl("64",Sys.getenv()["PROCESSOR_IDENTIFIER"])) 64 else 32
 			  installr::install.miktex(ver)
+		  }
 		# 	  if (ver == 32) {
 		# 	  	download.file("http://mirrors.ctan.org/systems/win32/miktex/setup/basic-miktex-2.9.5997.exe","miktex.exe")
 		# 	  } else {
 		# 	  	download.file("http://mirrors.ctan.org/systems/win32/miktex/setup/basic-miktex-2.9.5997-x64.ex","miktex.exe")
 		# 	  }
 		#     system("open miktex.exe")
-			}
+		  cat("Installation on Windows complete. Start Rstudio and select Radiant from the Addins menu to get started")
+
 		}
-		cat("Installation on Windows complete. Start Rstudio and select Radiant from the Addins menu to get started")
 	} else if (os == "Darwin") {
 		build()
 		tmp <- tempdir()
