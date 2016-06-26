@@ -10,16 +10,22 @@ build <- function() {
 rv <- R.Version()
 
 if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
-  cat("Radiant requires R-3.3.0 or later. Please install the latest version of R from https://cloud.r-project.org/")
+  cat("Radiant requires R-3.3.0 or later. Please install the latest\nversion of R from https://cloud.r-project.org/")
 } else {
 
 	os <- Sys.info()["sysname"]
 
 	if (os == "Windows") {
+	  lp <- .libPaths()[grepl("Documents",.libPaths())]
 		if (grepl("(Prog)|(PROG)", Sys.getenv("R_HOME"))) {
 	    rv <- paste(rv$major, rv$minor, sep = ".")
-			cat(paste0("It seems you installed R in the Program Files directory. Please uninstall R and re-install into C:\\R\\R-",rv))
-		} else {
+			cat(paste0("It seems you installed R in the Program Files directory.\nPlease uninstall R and re-install into C:\\R\\R-",rv))
+		} else if (length(lp) > 0) {
+
+			cat(paste0("Please remove the directory printed below and run the script again.\nInstalling packages in this directory often causes problems on Windows"))
+
+		  cat(paste0(lp, collapse = "\n"))
+	  } else {
 
 			build()
 			install.packages("installr")
