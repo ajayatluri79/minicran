@@ -1,8 +1,9 @@
-repos <- c("https://radiant-rstats.github.io/minicran/", "https://cloud.r-project.org")
+repos <- c("https://radiant-rstats.github.io/minicran/", "https://cran.rstudio.com")
 options(repos = c(CRAN = repos))
 
 build <- function() {
 	install.packages("radiant", repos = "https://radiant-rstats.github.io/minicran/", type = 'binary')
+	install.packages("miniUI", repos = "https://cran.rstudio.com", type = "binary")
 	install.packages("webshot", repos = "https://cran.rstudio.com", type = "binary")
 	if (Sys.which("phantomjs") == "") eval(parse(text = "webshot::install_phantomjs()"))
 }
@@ -22,7 +23,7 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 			cat(paste0("It seems you installed R in the Program Files directory.\nPlease uninstall R and re-install into C:\\R\\R-",rv))
 		} else if (length(lp) > 0) {
 
-			cat(paste0("Please remove the directory printed below and run the script again.\nInstalling packages in this directory often causes problems on Windows\n\n"))
+			cat("Installing R-packages in this directory printed below often causes problems\non Windows. Please remove the 'Documents\\R' directory,\nclose and restart R, and run the script again.\n\n")
 
 		  cat(paste0(lp, collapse = "\n"),"\n\n")
 	  } else {
@@ -33,7 +34,7 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 			installr::install.Rtools()
 
 		  cat("To generate PDF reports in Radiant you will need MikTex. This is a large download (approx 100MB).\n")
-		  inp <- readline("Proceed with the install? y/n ")
+		  inp <- readline("Proceed with the install? Press y or n and then press return")
 		  if (inp %in% c("y","yes","Yes","yes","YES")) {
 			  ver <- if (grepl("64",Sys.getenv()["PROCESSOR_IDENTIFIER"])) 64 else 32
 			  installr::install.miktex(ver)
@@ -55,14 +56,14 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 		system("open RStudio.dmg")
 
 		cat("To generate PDF reports in Radiant you will need MacTex. This is a large download (approx 2GB).\n")
-		inp <- readline("Proceed with the install? y/n ")
+	  inp <- readline("Proceed with the install? Press y or n and then press return")
 		if (inp %in% c("y","yes","Yes","yes","YES")) {
 			download.file("http://tug.org/cgi-bin/mactex-download/MacTeX.pkg", "MacTex.pkg")
 			system("open MacTex.pkg")
 		}
 		cat("Installation on Mac complete. Start Rstudio and select Radiant from the Addins menu to get started")
 	} else {
-		cat("Your OS is not currently supported")
+		cat("The install script is not currently supported on your OS")
 	}
 }
 
