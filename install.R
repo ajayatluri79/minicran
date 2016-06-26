@@ -22,7 +22,7 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 			cat(paste0("It seems you installed R in the Program Files directory.\nPlease uninstall R and re-install into C:\\R\\R-",rv))
 		} else if (length(lp) > 0) {
 
-			cat(paste0("Please remove the directory printed below and run the script again.\nInstalling packages in this directory often causes problems on Windows"))
+			cat(paste0("Please remove the directory printed below and run the script again.\nInstalling packages in this directory often causes problems on Windows\n\n"))
 
 		  cat(paste0(lp, collapse = "\n"))
 	  } else {
