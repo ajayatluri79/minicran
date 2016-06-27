@@ -484,6 +484,17 @@ License: AGPL-3 | file LICENSE
 MD5sum: d2b0e761d26986481fe86c8e0c3f8151
 NeedsCompilation: no
 
+Package: radiant.basics
+Version: 0.5.0
+Depends: R (>= 3.2.0), radiant.data (>= 0.5)
+Imports: ggplot2 (>= 2.0.0), gridExtra (>= 2.0.0), scales (>= 0.3.0), dplyr (>= 0.4.3), tidyr (>= 0.4.1),
+            magrittr (>= 1.5), broom (>= 0.4.0), shiny (>= 0.13.2.9003), psych (>= 1.5.8), import (>= 1.1.0),
+            methods
+Suggests: devtools (>= 1.8.0), testthat (>= 0.10.0), covr (>= 1.2.0)
+License: AGPL-3 | file LICENSE
+MD5sum: bc4f477860b8b7647d901fd05b3c27cc
+NeedsCompilation: no
+
 Package: radiant.data
 Version: 0.5
 Depends: R (>= 3.2.0), magrittr (>= 1.5), ggplot2 (>= 2.0.0), lubridate (>= 1.5.0), tidyr (>= 0.4.1), dplyr (>=
