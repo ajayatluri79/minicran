@@ -492,7 +492,7 @@ Imports: ggplot2 (>= 2.0.0), gridExtra (>= 2.0.0), scales (>= 0.3.0), dplyr (>= 
             1.1.0), methods
 Suggests: devtools (>= 1.8.0), testthat (>= 0.10.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 76c4530580059a73ae17addac6efaa63
+MD5sum: f516044bdb7fdd9cd08b1a1bffdfec46
 NeedsCompilation: no
 
 Package: radiant.data
