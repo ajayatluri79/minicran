@@ -128,14 +128,14 @@ MD5sum: 48048ce6c466bdb124716e45ba4a0e83
 NeedsCompilation: yes
 
 Package: dplyr
-Version: 0.4.3
+Version: 0.5.0
 Depends: R (>= 3.1.2)
-Imports: assertthat, utils, R6, Rcpp, magrittr, lazyeval (>= 0.1.10), DBI (>= 0.3)
+Imports: assertthat, utils, R6, Rcpp (>= 0.12.3), tibble, magrittr, lazyeval (>= 0.1.10), DBI (>= 0.4.1)
 LinkingTo: Rcpp (>= 0.12.0), BH (>= 1.58.0-1)
-Suggests: RSQLite (>= 1.0.0), RMySQL, RPostgreSQL, data.table, testthat, knitr, microbenchmark, ggplot2, mgcv,
-            Lahman (>= 3.0-1), nycflights13, methods
+Suggests: RSQLite (>= 1.0.0), RMySQL, RPostgreSQL, testthat, knitr, microbenchmark, ggplot2, mgcv, Lahman (>=
+            3.0-1), nycflights13, methods, rmarkdown, covr, dtplyr
 License: MIT + file LICENSE
-MD5sum: 19d4ee8b0a196073c390fa6ecb73eb11
+MD5sum: 1fcafcacca70806eea2e6d465cdb94ef
 NeedsCompilation: yes
 
 Package: DT

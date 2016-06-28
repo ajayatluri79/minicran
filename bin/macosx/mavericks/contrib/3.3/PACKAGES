@@ -18,6 +18,11 @@ License: GPL-2 | GPL-3
 Archs: base64enc.so.dSYM
 MD5sum: e81b1c1ae5b1be97b413a49e2af48f27
 
+Package: BH
+Version: 1.60.0-2
+License: BSL-1.0
+MD5sum: 149b147bce160018c986ab2d47cff6da
+
 Package: bitops
 Version: 1.0-6
 License: GPL (>= 2)
@@ -114,15 +119,15 @@ Archs: digest.so.dSYM
 MD5sum: fcfc55e1b458fb2a253179c6257b00c8
 
 Package: dplyr
-Version: 0.4.3
+Version: 0.5.0
 Depends: R (>= 3.1.2)
-Imports: assertthat, utils, R6, Rcpp, magrittr, lazyeval (>= 0.1.10), DBI (>= 0.3)
+Imports: assertthat, utils, R6, Rcpp (>= 0.12.3), tibble, magrittr, lazyeval (>= 0.1.10), DBI (>= 0.4.1)
 LinkingTo: Rcpp (>= 0.12.0), BH (>= 1.58.0-1)
-Suggests: RSQLite (>= 1.0.0), RMySQL, RPostgreSQL, data.table, testthat, knitr, microbenchmark, ggplot2, mgcv,
-            Lahman (>= 3.0-1), nycflights13, methods
+Suggests: RSQLite (>= 1.0.0), RMySQL, RPostgreSQL, testthat, knitr, microbenchmark, ggplot2, mgcv, Lahman (>=
+            3.0-1), nycflights13, methods, rmarkdown, covr, dtplyr
 License: MIT + file LICENSE
 Archs: dplyr.so.dSYM
-MD5sum: 0921afbc938e70880c4b478504e71155
+MD5sum: 744b169c9fe6ffa5909abb4ab3015e3e
 
 Package: DT
 Version: 0.1.56
