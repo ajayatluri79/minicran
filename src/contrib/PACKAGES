@@ -511,7 +511,7 @@ Imports: radiant.basics (>= 0.5.1), shiny (>= 0.13.2.9003), nnet (>= 7.3.11), Ne
                     magrittr (>= 1.5), DiagrammeR(>= 0.8.3), import (>= 1.1.0), methods
 Suggests: devtools (>= 1.8.0), testthat (>= 0.10.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 6e308b2c64fab7bc02ba6a5b6d916a4b
+MD5sum: 9da82cf664c2047f43ac2348c461981c
 NeedsCompilation: no
 
 Package: radiant.multivariate
