@@ -449,63 +449,63 @@ License: MIT + file LICENSE
 MD5sum: 6dfa2cf54a18e7662d84fa06317930e7
 
 Package: radiant
-Version: 0.5.0
-Depends: R (>= 3.2.0), radiant.data (>= 0.5), radiant.design (>= 0.5), radiant.basics (>= 0.5), radiant.model (>=
-            0.5), radiant.multivariate (>= 0.5)
+Version: 0.5.1
+Depends: R (>= 3.2.0), radiant.data (>= 0.5.1), radiant.design (>= 0.5.1), radiant.basics (>= 0.5.1),
+            radiant.model (>= 0.5.1), radiant.multivariate (>= 0.5.1)
 Imports: psych (>= 1.5.8), AlgDesign (>= 1.1.7.3), shiny (>= 0.13.2.9003), import (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 58e6898e3a52986490cf93f21b94900b
+MD5sum: fe96e4d4240b06a1a0acf307d2bd1329
 
 Package: radiant.basics
-Version: 0.5.0
-Depends: R (>= 3.2.0), radiant.data (>= 0.5)
-Imports: ggplot2 (>= 2.0.0), gridExtra (>= 2.0.0), scales (>= 0.3.0), dplyr (>= 0.4.3), tidyr (>= 0.4.1),
-            magrittr (>= 1.5), broom (>= 0.4.0), shiny (>= 0.13.2.9003), psych (>= 1.5.8), import (>= 1.1.0),
-            methods
+Version: 0.5.1
+Depends: R (>= 3.2.0), radiant.data (>= 0.5.1)
+Imports: ggplot2 (>= 2.0.0), gridExtra (>= 2.0.0), scales (>= 0.3.0), dplyr (>= 0.5), tibble (>= 1.0), tidyr (>=
+            0.4.1), magrittr (>= 1.5), broom (>= 0.4.0), shiny (>= 0.13.2.9003), psych (>= 1.5.8), import (>=
+            1.1.0), methods
 Suggests: devtools (>= 1.8.0), testthat (>= 0.10.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 2c0d544f98a80f5c24994287f79d49d3
+MD5sum: 12d41580f6082f386f234ba16b65cb36
 
 Package: radiant.data
-Version: 0.5
+Version: 0.5.1
 Depends: R (>= 3.2.0), magrittr (>= 1.5), ggplot2 (>= 2.0.0), lubridate (>= 1.5.0), tidyr (>= 0.4.1), dplyr (>=
-            0.4.3),
+            0.5),
 Imports: broom (>= 0.4.0), car (>= 2.1.1), gridExtra (>= 2.0.0), knitr (>= 1.13), rmarkdown(>= 0.9.5), markdown
             (>= 0.7.7), pryr (>= 0.1.2), shiny (>= 0.13.2), jsonlite (>= 0.9.17), shinyAce (>= 0.2.1), psych (>=
             1.5.8), DT (>= 0.1.55), readr (>= 0.2.2), scales (>= 0.3.0), curl (>= 0.9.4), rstudioapi (>= 0.5),
             import (>= 1.1.0), base64enc, methods
 Suggests: devtools (>= 1.8.0), testthat (>= 0.10.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 7fb8ad741a797ccd46b1241a3f656835
+MD5sum: 8303e35662095caf21cca4fd09cef107
 
 Package: radiant.design
-Version: 0.5.0
-Depends: R (>= 3.2.0), radiant.data (>= 0.5)
-Imports: dplyr (>= 0.4.3), broom (>= 0.4.0), shiny (>= 0.13.2.9003), AlgDesign (>= 1.1.7.3), import (>= 1.1.0),
+Version: 0.5.1
+Depends: R (>= 3.2.0), radiant.data (>= 0.5.1)
+Imports: dplyr (>= 0.5), broom (>= 0.4.0), shiny (>= 0.13.2.9003), AlgDesign (>= 1.1.7.3), import (>= 1.1.0),
             methods
 License: AGPL-3 | file LICENSE
-MD5sum: 7c25efea327d05a7539f55b1a7636f2d
+MD5sum: 905941c735d69ab6bcf255c767a24f50
 
 Package: radiant.model
-Version: 0.5.0
-Depends: R (>= 3.2.0), radiant.data (>= 0.5)
-Imports: radiant.basics (>= 0.1), shiny (>= 0.13.2.9003), nnet (>= 7.3.11), NeuralNetTools (>= 1.4.0), sandwich
+Version: 0.5.1
+Depends: R (>= 3.2.0), radiant.data (>= 0.5.1)
+Imports: radiant.basics (>= 0.5.1), shiny (>= 0.13.2.9003), nnet (>= 7.3.11), NeuralNetTools (>= 1.4.0), sandwich
             (>= 2.3.4), car (>= 2.1.1), broom (>= 0.4.0), ggplot2 (>= 2.0.0), gridExtra (>= 2.0.0), data.tree
             (>= 0.1.9), yaml (>= 2.1.13), stringr (>= 1.0), pryr (>= 0.1.2), lubridate (>= 1.5.0), tidyr (>=
-            0.4.1), dplyr (>= 0.4.3), magrittr (>= 1.5), DiagrammeR(>= 0.8.3), import (>= 1.1.0), methods
+            0.4.1), dplyr (>= 0.5), magrittr (>= 1.5), DiagrammeR(>= 0.8.3), import (>= 1.1.0), methods
 Suggests: devtools (>= 1.8.0), testthat (>= 0.10.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 96ecc7ced0169b2224dc89e630dad54f
+MD5sum: 4a5dff80f586d9953702872fba94b009
 
 Package: radiant.multivariate
-Version: 0.5.0
-Depends: R (>= 3.2.0), radiant.data (>= 0.5)
-Imports: shiny (>= 0.13.2.9003), dplyr (>= 0.4.3), ggplot2 (>= 2.0.0), gridExtra (>= 2.0.0), scales (>= 0.3.0),
+Version: 0.5.1
+Depends: R (>= 3.2.0), radiant.data (>= 0.5.1)
+Imports: shiny (>= 0.13.2.9003), dplyr (>= 0.5), ggplot2 (>= 2.0.0), gridExtra (>= 2.0.0), scales (>= 0.3.0),
             magrittr (>= 1.5), broom (>= 0.4.0), psych (>= 1.5.8), car (>= 2.1.1), MASS (>= 7.3), wordcloud (>=
             2.5), import (>= 1.1.0), methods
 Suggests: devtools (>= 1.8.0), testthat (>= 0.10.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
-MD5sum: d704ab6bf3ca60ca2bb6d26035c15303
+MD5sum: 81a58c874ea1ed4b45f131d42162b7ee
 
 Package: RColorBrewer
 Version: 1.1-2
