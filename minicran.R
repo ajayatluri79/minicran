@@ -14,7 +14,7 @@ repos <- c("https://radiant-rstats.github.io/minicran/", "https://cloud.r-projec
 options(repos = c(CRAN = repos))
 
 pth <- "~/gh/minicran"
-pkgs = c("radiant")
+pkgs = c("dplyr")
 
 # building minicran for source packages
 pkgList <- pkgDep(pkgs, repos = repos, type = "source", suggests = FALSE)
