@@ -505,7 +505,7 @@ Imports: broom (>= 0.4.0), car (>= 2.1.1), gridExtra (>= 2.0.0), knitr (>= 1.13)
             import (>= 1.1.0), base64enc, methods
 Suggests: devtools (>= 1.8.0), testthat (>= 0.10.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 56d2cf1d74a260867b1006eb02fd7679
+MD5sum: ca3cc29b66011416c10a96bfbd41ae74
 NeedsCompilation: no
 
 Package: radiant.design
