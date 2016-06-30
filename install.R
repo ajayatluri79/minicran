@@ -16,7 +16,6 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 } else {
 
 	os <- Sys.info()["sysname"]
-
 	if (os == "Windows") {
 	  lp <- .libPaths()[grepl("Documents",.libPaths())]
 		if (grepl("(Prog)|(PROG)", Sys.getenv("R_HOME"))) {
@@ -32,7 +31,19 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 			build()
 			install.packages("installr")
 			installr::install.rstudio()
-			installr::install.Rtools()
+			# installr::install.Rtools()
+
+			wz <- suppressWarnings(system("where R", intern = TRUE))
+			if (!grepl("zip", wz)) {
+				installr::install.7zip()
+				if (file.exists(file.path(Sys.getenv("ProgramFiles"), "7-Zip"))) {
+					shell(paste0("setx PATH \"", paste0(Sys.getenv("ProgramFiles"), "\\7-Zip\"")))
+				} else if (file.exists(file.path(Sys.getenv("ProgramFiles(x86)"), "7-Zip"))) {
+					shell(paste0("setx PATH \"", paste0(Sys.getenv("ProgramFiles(x86)"), "\\7-Zip\"")))
+				} else {
+					cat("Couldn't find the location where 7-zip was installed. Update the system path manually")
+				}
+			}
 
 		  cat("To generate PDF reports in Radiant you will need MikTex. This is a large\ndownload (approx 100MB).\n")
 		  inp <- readline("Proceed with the install? Press y or n and then press return  ")
