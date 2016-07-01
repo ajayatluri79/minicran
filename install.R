@@ -38,7 +38,7 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 			tmp <- tempdir()
 			setwd(tmp)
 			download.file(URL,"Rstudio.exe")
-			system("open RStudio.exe", wait = TRUE)
+			system("RStudio.exe", wait = TRUE)
 
 			wz <- suppressWarnings(system("where R", intern = TRUE))
 			if (!grepl("zip", wz)) {
