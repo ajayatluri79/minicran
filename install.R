@@ -12,21 +12,20 @@ build <- function() {
 rv <- R.Version()
 
 if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
-  cat("Radiant requires R-3.3.0 or later. Please install the latest\nversion of R from https://cloud.r-project.org/")
+	cat("Radiant requires R-3.3.0 or later. Please install the latest\nversion of R from https://cloud.r-project.org/")
 } else {
 
 	os <- Sys.info()["sysname"]
 	if (os == "Windows") {
-	  lp <- .libPaths()[grepl("Documents",.libPaths())]
+		lp <- .libPaths()[grepl("Documents",.libPaths())]
 		if (grepl("(Prog)|(PROG)", Sys.getenv("R_HOME"))) {
-	    rv <- paste(rv$major, rv$minor, sep = ".")
+			rv <- paste(rv$major, rv$minor, sep = ".")
 			cat(paste0("It seems you installed R in the Program Files directory.\nPlease uninstall R and re-install into C:\\R\\R-",rv),"\n\n")
 		} else if (length(lp) > 0) {
 
 			cat("Installing R-packages in the directory printed below often causes\nproblems on Windows. Please remove the 'Documents/R' directory,\nclose and restart R, and run the script again.\n\n")
-
-		  cat(paste0(lp, collapse = "\n"),"\n\n")
-	  } else {
+			cat(paste0(lp, collapse = "\n"),"\n\n")
+		} else {
 
 			build()
 			install.packages("installr")
@@ -45,30 +44,30 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 				}
 			}
 
-		  cat("To generate PDF reports in Radiant you will need MikTex. This is a large\ndownload (approx 100MB).\n")
-		  inp <- readline("Proceed with the install? Press y or n and then press return  ")
-		  if (grepl("[yY]", inp)) {
-			  ver <- if (grepl("64",Sys.getenv()["PROCESSOR_IDENTIFIER"])) 64 else 32
-			  installr::install.miktex(ver)
-		  }
-		  cat("\n\nInstallation on Windows complete. Start Rstudio and select Radiant\nfrom the Addins menu to get started\n\n")
+			cat("To generate PDF reports in Radiant you will need MikTex. This is a large\ndownload (approx 100MB).\n")
+			inp <- readline("Proceed with the install? Press y or n and then press return  ")
+			if (grepl("[yY]", inp)) {
+				ver <- if (grepl("64",Sys.getenv()["PROCESSOR_IDENTIFIER"])) 64 else 32
+				installr::install.miktex(ver)
+			}
+			cat("\n\nInstallation on Windows complete. Start Rstudio and select Radiant\nfrom the Addins menu to get started\n\n")
 		}
 	} else if (os == "Darwin") {
 		build()
 
-	  ## get rstudio
-    ##  based on https://github.com/talgalili/installr/blob/82bf5b542ce6d2ef4ebc6359a4772e0c87427b64/R/install.R#L805-L813
-    page <- readLines("https://www.rstudio.com/ide/download/desktop", warn = FALSE)
-    pat <- "//download1.rstudio.org/RStudio-[0-9.]+.dmg";
-    URL <- paste0("https:",regmatches(page,regexpr(pat,page))[1])
+		## get rstudio
+		##  based on https://github.com/talgalili/installr/blob/82bf5b542ce6d2ef4ebc6359a4772e0c87427b64/R/install.R#L805-L813
+		page <- readLines("https://www.rstudio.com/ide/download/desktop", warn = FALSE)
+		pat <- "//download1.rstudio.org/RStudio-[0-9.]+.dmg";
+		URL <- paste0("https:",regmatches(page,regexpr(pat,page))[1])
 		tmp <- tempdir()
 		setwd(tmp)
 		download.file(URL,"Rstudio.dmg")
 		system("open RStudio.dmg")
 
 		cat("To generate PDF reports in Radiant you will need MacTex. This is a very large\ndownload (approx 2GB).\n")
-	  inp <- readline("Proceed with the install? Press y or n and then press return  ")
-	  if (grepl("[yY]", inp)) {
+		inp <- readline("Proceed with the install? Press y or n and then press return  ")
+		if (grepl("[yY]", inp)) {
 			download.file("http://tug.org/cgi-bin/mactex-download/MacTeX.pkg", "MacTex.pkg")
 			system("open MacTex.pkg", wait = TRUE)
 		}
