@@ -29,8 +29,16 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 
 			build()
 			install.packages("installr")
-			installr::install.rstudio()
+			# installr::install.rstudio()
 			# installr::install.Rtools()
+			## get rstudio - preview
+			page <- readLines("https://www.rstudio.com/products/rstudio/download/preview/", warn = FALSE)
+			pat <- "//s3.amazonaws.com/rstudio-dailybuilds/RStudio-[0-9.]+.exe"
+			URL <- paste0("https:",regmatches(page,regexpr(pat,page))[1])
+			tmp <- tempdir()
+			setwd(tmp)
+			download.file(URL,"Rstudio.exe")
+			system("open RStudio.exe", wait = TRUE)
 
 			wz <- suppressWarnings(system("where R", intern = TRUE))
 			if (!grepl("zip", wz)) {
@@ -57,8 +65,11 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 
 		## get rstudio
 		##  based on https://github.com/talgalili/installr/blob/82bf5b542ce6d2ef4ebc6359a4772e0c87427b64/R/install.R#L805-L813
-		page <- readLines("https://www.rstudio.com/ide/download/desktop", warn = FALSE)
-		pat <- "//download1.rstudio.org/RStudio-[0-9.]+.dmg";
+		# page <- readLines("https://www.rstudio.com/ide/download/desktop", warn = FALSE)
+		# pat <- "//download1.rstudio.org/RStudio-[0-9.]+.dmg";
+		## get rstudio - preview
+		page <- readLines("https://www.rstudio.com/products/rstudio/download/preview/", warn = FALSE)
+		pat <- "//s3.amazonaws.com/rstudio-dailybuilds/RStudio-[0-9.]+.dmg"
 		URL <- paste0("https:",regmatches(page,regexpr(pat,page))[1])
 		tmp <- tempdir()
 		setwd(tmp)
