@@ -1,4 +1,5 @@
 ## install script for R(adiant) @ Rady School of Management (MBA)
+cdir <- getwd()
 repos <- c("https://radiant-rstats.github.io/minicran/", "https://cran.rstudio.com")
 options(repos = c(CRAN = repos))
 
@@ -29,17 +30,13 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 
 			build()
 			install.packages("installr")
-			# installr::install.rstudio()
+			installr::install.rstudio()
 			# installr::install.Rtools()
 			## get rstudio - preview
 			page <- readLines("https://www.rstudio.com/products/rstudio/download/preview/", warn = FALSE)
 			pat <- "//s3.amazonaws.com/rstudio-dailybuilds/RStudio-[0-9.]+.exe"
 			URL <- paste0("https:",regmatches(page,regexpr(pat,page))[1])
-			tmp <- tempdir()
-			setwd(tmp)
-			download.file(URL,"Rstudio.exe")
-			# shell("RStudio.exe /s", wait = TRUE)
-		  shell("RStudio.exe /S")
+			installr::install.URL(URL, installer_option = "/S")
 
 			wz <- suppressWarnings(system("where R", intern = TRUE))
 			if (!grepl("zip", wz)) {
@@ -88,3 +85,5 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 		cat("\n\nThe install script is not currently supported on your OS")
 	}
 }
+
+setwd(cdir)
