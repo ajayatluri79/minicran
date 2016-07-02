@@ -1,0 +1,101 @@
+## install script for R(adiant) @ Rady School of Management (MBA)
+cdir <- getwd()
+tmp <- tempdir()
+setwd(tmp)
+
+repos <- c("https://radiant-rstats.github.io/minicran/", "https://cran.rstudio.com")
+options(repos = c(CRAN = repos))
+
+build <- function() {
+	if (!"radiant" %in% installed.packages())
+	  install.packages("radiant", type = 'binary')
+
+	update.packages(ask = FALSE, repos = "https://radiant-rstats.github.io/minicran/", type = "binary")
+	install.packages("devtools", type = 'binary')
+	install.packages("roxygen2", type = 'binary')
+}
+
+readliner <- function(text, inp = "", resp = "[yYnN]") {
+	while (!grepl(resp, inp))
+		inp <- readline(text)
+
+	return(inp)
+}
+
+rv <- R.Version()
+
+if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
+	cat("Radiant requires R-3.3.0 or later. Please install the latest\nversion of R from https://cloud.r-project.org/")
+} else {
+
+	os <- Sys.info()["sysname"]
+	if (os == "Windows") {
+		lp <- .libPaths()[grepl("Documents",.libPaths())]
+		if (grepl("(Prog)|(PROG)", Sys.getenv("R_HOME"))) {
+			rv <- paste(rv$major, rv$minor, sep = ".")
+			cat(paste0("It seems you installed R in the Program Files directory.\nPlease uninstall R and re-install into C:\\R\\R-",rv),"\n\n")
+		} else if (length(lp) > 0) {
+
+			cat("Installing R-packages in the directory printed below often causes\nproblems on Windows. Please remove the 'Documents/R' directory,\nclose and restart R, and run the script again.\n\n")
+			cat(paste0(lp, collapse = "\n"),"\n\n")
+		} else {
+
+			build()
+
+			if (!require("installr")) {
+			  install.packages("installr")
+			  library("installr")
+			}
+
+			installr::install.Rtools()
+			installr::install.git()
+
+			## get rstudio - preview
+			page <- readLines("https://www.rstudio.com/products/rstudio/download/preview/", warn = FALSE)
+			pat <- "//s3.amazonaws.com/rstudio-dailybuilds/RStudio-[0-9.]+.exe"
+			URL <- paste0("https:",regmatches(page,regexpr(pat,page))[1])
+			installr::install.URL(URL, installer_option = "/S")
+
+			cat("\n\nInstallation on Windows complete. Start Rstudio and select Radiant\nfrom the Addins menu to get started\n\n")
+		}
+	} else if (os == "Darwin") {
+		build()
+
+		## get rstudio
+		##  based on https://github.com/talgalili/installr/blob/82bf5b542ce6d2ef4ebc6359a4772e0c87427b64/R/install.R#L805-L813
+		# page <- readLines("https://www.rstudio.com/ide/download/desktop", warn = FALSE)
+		# pat <- "//download1.rstudio.org/RStudio-[0-9.]+.dmg";
+		## get rstudio - preview
+
+	  # download.file("https://developer.apple.com/services-account/download?path=/Developer_Tools/Xcode_7.3.1/Xcode_7.3.1.dmg","Xcode.dmg")
+	  system("open 'https://developer.apple.com/services-account/download?path=/Developer_Tools/Xcode_7.2.1/Xcode_7.2.1.dmg'")
+		# cat("Install Xcode. You may need to provide login information for your Apple account to get\nXcode. Download the file to a location of your choice and install it. When the install\nis complete open Xcode, go to Preferences > Downloads, and install the Command Line Tools")
+		cat("Install Xcode. You will need to provide login information for your Apple account to get\nXcode. Download the file to a location of your choice and install it. When the install\nis complete open Xcode, go to Preferences > Downloads, and install the Command Line Tools")
+
+		hb <- suppressWarnings(system("which brew", intern = TRUE))
+		if (length(hb) == 0) {
+		  cat("To install homebrew wait untill the install of Xcode is complete before proceeding")
+		  inp <- readliner("Type y to install homebrew or n to stop the process: ")
+		  if (grepl("[yY]", inp)) {
+		    hb_string <- "tell application \"Terminal\"\n\tactivate\n\tdo script \"/usr/bin/ruby -e \\\"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\\\"\"\nend tell"
+		    cat(hb_string, file="hombrew.scpt",sep="\n")
+		    system("osascript homebrew.scpt", wait = TRUE)
+	    }
+		}
+
+		inp <- readliner("Type y to install Rstudio preview or n to stop the process: ")
+		if (grepl("[yY]", inp)) {
+			page <- readLines("https://www.rstudio.com/products/rstudio/download/preview/", warn = FALSE)
+			pat <- "//s3.amazonaws.com/rstudio-dailybuilds/RStudio-[0-9.]+.dmg"
+			URL <- paste0("https:",regmatches(page,regexpr(pat,page))[1])
+			download.file(URL,"Rstudio.dmg")
+			system("open RStudio.dmg")
+		}
+
+		cat("\n\nInstallation on Mac complete.\n\n")
+	} else {
+		cat("\n\nThe install script is not currently supported on your OS")
+	}
+}
+
+setwd(cdir)
