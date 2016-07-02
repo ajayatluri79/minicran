@@ -14,7 +14,7 @@ repos <- c("https://radiant-rstats.github.io/minicran/", "https://cloud.r-projec
 options(repos = c(CRAN = repos))
 
 pth <- "~/gh/minicran"
-pkgs = c("dplyr")
+pkgs = c("radiant")
 
 # building minicran for source packages
 pkgList <- pkgDep(pkgs, repos = repos, type = "source", suggests = FALSE)
@@ -23,10 +23,6 @@ makeRepo(pkgList, path = pth, type = "source")
 # building minicran for windows binaries
 pkgList <- pkgDep(pkgs, repos = repos, type = "win.binary", suggests = FALSE)
 makeRepo(pkgList, path = pth, type = "win.binary")
-
-# building minicran for mac binaries
-# pkgList <- pkgDep(pkgs, repos = repos, type = "mac.binary", suggests = FALSE)
-# makeRepo(pkgList, path = pth, type = "mac.binary")
 
 # building minicran for mac mavericks binaries
 pkgList <- pkgDep(pkgs, repos = repos, type = "mac.binary.mavericks", suggests = FALSE)
@@ -54,22 +50,9 @@ for(pdir in pdirs) {
   }
 }
 
-# for (pdir in pdirs[-1]) {
-#   from <- paste0(file.path(pth, pdir),"/")
-#   to <- gsub("3.3","3.2", from)
-#   system(paste("rsync -vax", from, to))
-# }
-
 ## needed to update PACKAGES after deleting old versions
-# library(tools)
-# write_PACKAGES(file.path(pth, "bin/macosx/contrib/3.2/"), type = "mac.binary")
-# write_PACKAGES(file.path(pth, "bin/macosx/contrib/3.3/"), type = "mac.binary")
-
-# write_PACKAGES(file.path(pth, "bin/windows/contrib/3.2/"), type = "win.binary")
 tools::write_PACKAGES(file.path(pth, "bin/windows/contrib/3.3/"), type = "win.binary")
-
 tools::write_PACKAGES(file.path(pth, "bin/macosx/mavericks/contrib/3.3/"), type = "mac.binary")
-# write_PACKAGES(file.path(pth, "bin/macosx/mavericks/contrib/3.2/"), type = "mac.binary")
 tools::write_PACKAGES(file.path(pth, "src/contrib/"), type = "source")
 
 

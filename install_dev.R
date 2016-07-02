@@ -68,17 +68,25 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 		## get rstudio - preview
 
 	  # download.file("https://developer.apple.com/services-account/download?path=/Developer_Tools/Xcode_7.3.1/Xcode_7.3.1.dmg","Xcode.dmg")
-	  system("open 'https://developer.apple.com/services-account/download?path=/Developer_Tools/Xcode_7.2.1/Xcode_7.2.1.dmg'")
+	  # system("open 'https://developer.apple.com/services-account/download?path=/Developer_Tools/Xcode_7.2.1/Xcode_7.2.1.dmg'")
 		# cat("Install Xcode. You may need to provide login information for your Apple account to get\nXcode. Download the file to a location of your choice and install it. When the install\nis complete open Xcode, go to Preferences > Downloads, and install the Command Line Tools")
-		cat("Install Xcode. You will need to provide login information for your Apple account to get\nXcode. Download the file to a location of your choice and install it. When the install\nis complete open Xcode, go to Preferences > Downloads, and install the Command Line Tools")
+		# cat("Install Xcode. You will need to provide login information for your Apple account to get\nXcode. Download the file to a location of your choice and install it. When the install\nis complete open Xcode, go to Preferences > Downloads, and install the Command Line Tools")
+
+		# xc <- try(suppressWarnings(suppressMessages(system("xcode-select --install", intern = TRUE))), silent = TRUE)
+		xc <- system("xcode-select --install", ignore.stderr = TRUE)
+		if (xc == 1) {
+			cat("\n\nXcode command line tools are already installed\n\n")
+		} else {
+			cat("\n\nXcode command line tools were successfully installed\n\n")
+		}
 
 		hb <- suppressWarnings(system("which brew", intern = TRUE))
 		if (length(hb) == 0) {
-		  cat("To install homebrew wait untill the install of Xcode is complete before proceeding")
+		  cat("If you are going to use Mac OS for scientific computing we recommend that you install homebrew")
 		  inp <- readliner("Type y to install homebrew or n to stop the process: ")
 		  if (grepl("[yY]", inp)) {
 		    hb_string <- "tell application \"Terminal\"\n\tactivate\n\tdo script \"/usr/bin/ruby -e \\\"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\\\"\"\nend tell"
-		    cat(hb_string, file="hombrew.scpt",sep="\n")
+		    cat(hb_string, file="homebrew.scpt",sep="\n")
 		    system("osascript homebrew.scpt", wait = TRUE)
 	    }
 		}

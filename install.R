@@ -65,7 +65,7 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 				ver <- if (grepl("64",Sys.getenv()["PROCESSOR_IDENTIFIER"])) 64 else 32
 				installr::install.miktex(ver)
 			}
-			cat("\n\nInstallation on Windows complete. Start Rstudio and select Radiant\nfrom the Addins menu to get started\n\n")
+			cat("\n\nInstallation on Windows complete. Close R, start Rstudio, and select Radiant\nfrom the Addins menu to get started\n\n")
 		}
 	} else if (os == "Darwin") {
 		build()
@@ -89,7 +89,7 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 			download.file("http://tug.org/cgi-bin/mactex-download/MacTeX.pkg", "MacTex.pkg")
 			system("open MacTex.pkg", wait = TRUE)
 		}
-		cat("\n\nInstallation on Mac complete. Start Rstudio and select Radiant\nfrom the Addins menu to get started\n\n")
+		cat("\n\nInstallation on Mac complete. Close R, start Rstudio, and select Radiant\nfrom the Addins menu to get started\n\n")
 	} else {
 		cat("\n\nThe install script is not currently supported on your OS")
 	}
