@@ -10,6 +10,13 @@ build <- function() {
 	if (Sys.which("phantomjs") == "") eval(parse(text = "webshot::install_phantomjs()"))
 }
 
+readliner <- function(text, inp = "", resp = "[yYnN]") {
+	while (!grepl(resp, inp))
+		inp <- readline(text)
+
+	return(inp)
+}
+
 rv <- R.Version()
 
 if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
@@ -51,7 +58,7 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 			}
 
 			cat("To generate PDF reports in Radiant you will need MikTex. This is a large\ndownload (approx 100MB).\n")
-			inp <- readline("Proceed with the install? Press y or n and then press return  ")
+			inp <- readliner("Proceed with the install? Press y or n and then press return: ")
 			if (grepl("[yY]", inp)) {
 				ver <- if (grepl("64",Sys.getenv()["PROCESSOR_IDENTIFIER"])) 64 else 32
 				installr::install.miktex(ver)
@@ -75,7 +82,7 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 		system("open RStudio.dmg")
 
 		cat("To generate PDF reports in Radiant you will need MacTex. This is a very large\ndownload (approx 2GB).\n")
-		inp <- readline("Proceed with the install? Press y or n and then press return  ")
+		inp <- readliner("Proceed with the install? Press y or n and then press return: ")
 		if (grepl("[yY]", inp)) {
 			download.file("http://tug.org/cgi-bin/mactex-download/MacTeX.pkg", "MacTex.pkg")
 			system("open MacTex.pkg", wait = TRUE)
