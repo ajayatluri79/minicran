@@ -30,7 +30,7 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 
 			build()
 			install.packages("installr")
-			installr::install.rstudio()
+			# installr::install.rstudio()
 			# installr::install.Rtools()
 			## get rstudio - preview
 			page <- readLines("https://www.rstudio.com/products/rstudio/download/preview/", warn = FALSE)
