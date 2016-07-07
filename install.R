@@ -68,30 +68,37 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 			cat("\n\nInstallation on Windows complete. Close R, start Rstudio, and select Radiant\nfrom the Addins menu to get started\n\n")
 		}
 	} else if (os == "Darwin") {
-		build()
 
-		## get rstudio
-		##  based on https://github.com/talgalili/installr/blob/82bf5b542ce6d2ef4ebc6359a4772e0c87427b64/R/install.R#L805-L813
-		# page <- readLines("https://www.rstudio.com/ide/download/desktop", warn = FALSE)
-		# pat <- "//download1.rstudio.org/RStudio-[0-9.]+.dmg";
-		## get rstudio - preview
-		page <- readLines("https://www.rstudio.com/products/rstudio/download/preview/", warn = FALSE)
-		pat <- "//s3.amazonaws.com/rstudio-dailybuilds/RStudio-[0-9.]+.dmg"
-		URL <- paste0("https:",regmatches(page,regexpr(pat,page))[1])
-		tmp <- tempdir()
-		setwd(tmp)
-		download.file(URL,"Rstudio.dmg")
-		system("open RStudio.dmg")
+    resp <- system("sw_vers -productVersion", intern = TRUE)
+    if (as.integer(strsplit(resp, "\\.")[[1]][2]) < 9) {
+			cat("The version of OSX on your mac is no longer supported by R. You will need to upgrade the OS before proceeding\n\n")
+    } else {
 
-		cat("To generate PDF reports in Radiant you will need MacTex. This is a very large\ndownload (approx 2GB).\n")
-		inp <- readliner("Proceed with the install? Press y or n and then press return: ")
-		if (grepl("[yY]", inp)) {
-			download.file("http://tug.org/cgi-bin/mactex-download/MacTeX.pkg", "MacTex.pkg")
-			system("open MacTex.pkg", wait = TRUE)
+			build()
+
+			## get rstudio
+			##  based on https://github.com/talgalili/installr/blob/82bf5b542ce6d2ef4ebc6359a4772e0c87427b64/R/install.R#L805-L813
+			# page <- readLines("https://www.rstudio.com/ide/download/desktop", warn = FALSE)
+			# pat <- "//download1.rstudio.org/RStudio-[0-9.]+.dmg";
+			## get rstudio - preview
+			page <- readLines("https://www.rstudio.com/products/rstudio/download/preview/", warn = FALSE)
+			pat <- "//s3.amazonaws.com/rstudio-dailybuilds/RStudio-[0-9.]+.dmg"
+			URL <- paste0("https:",regmatches(page,regexpr(pat,page))[1])
+			tmp <- tempdir()
+			setwd(tmp)
+			download.file(URL,"Rstudio.dmg")
+			system("open RStudio.dmg")
+
+			cat("To generate PDF reports in Radiant you will need MacTex. This is a very large\ndownload (approx 2GB).\n")
+			inp <- readliner("Proceed with the install? Press y or n and then press return: ")
+			if (grepl("[yY]", inp)) {
+				download.file("http://tug.org/cgi-bin/mactex-download/MacTeX.pkg", "MacTex.pkg")
+				system("open MacTex.pkg", wait = TRUE)
+			}
+			cat("\n\nInstallation on Mac complete. Close R, start Rstudio, and select Radiant\nfrom the Addins menu to get started\n\n")
+		} else {
+			cat("\n\nThe install script is not currently supported on your OS")
 		}
-		cat("\n\nInstallation on Mac complete. Close R, start Rstudio, and select Radiant\nfrom the Addins menu to get started\n\n")
-	} else {
-		cat("\n\nThe install script is not currently supported on your OS")
 	}
 }
 
