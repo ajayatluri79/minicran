@@ -45,7 +45,8 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 			page <- readLines("https://www.rstudio.com/products/rstudio/download/preview/", warn = FALSE)
 			pat <- "//s3.amazonaws.com/rstudio-dailybuilds/RStudio-[0-9.]+.exe"
 			URL <- paste0("https:",regmatches(page,regexpr(pat,page))[1])
-			installr::install.URL(URL, installer_option = "/S")
+			# installr::install.URL(URL, installer_option = "/S")
+			installr::install.URL(URL)
 
 			wz <- suppressWarnings(system("where R", intern = TRUE))
 			if (!grepl("zip", wz)) {
