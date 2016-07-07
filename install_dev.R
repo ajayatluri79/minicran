@@ -10,7 +10,7 @@ build <- function() {
 	if (!"radiant" %in% installed.packages())
 	  install.packages("radiant", type = 'binary')
 
-	update.packages(ask = FALSE, repos = "https://radiant-rstats.github.io/minicran/", type = "binary")
+	suppressWarnings(update.packages(ask = FALSE, repos = "https://radiant-rstats.github.io/minicran/", type = "binary"))
 	install.packages("devtools", type = 'binary')
 	install.packages("roxygen2", type = 'binary')
 	install.packages("testthat", type = 'binary')

@@ -6,7 +6,7 @@ options(repos = c(CRAN = repos))
 build <- function() {
 	if (!"radiant" %in% installed.packages())
 	  install.packages("radiant", type = 'binary')
-	update.packages(ask = FALSE, repos = "https://radiant-rstats.github.io/minicran/", type = "binary")
+	suppressWarnings(update.packages(ask = FALSE, repos = "https://radiant-rstats.github.io/minicran/", type = "binary"))
 	install.packages("miniUI", repos = "https://cran.rstudio.com", type = "binary")
 	install.packages("webshot", repos = "https://cran.rstudio.com", type = "binary")
 	if (Sys.which("phantomjs") == "") eval(parse(text = "webshot::install_phantomjs()"))
@@ -96,9 +96,9 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 				system("open MacTex.pkg", wait = TRUE)
 			}
 			cat("\n\nInstallation on Mac complete. Close R, start Rstudio, and select Radiant\nfrom the Addins menu to get started\n\n")
-		} else {
-			cat("\n\nThe install script is not currently supported on your OS")
-		}
+    }
+  } else {
+		cat("\n\nThe install script is not currently supported on your OS")
 	}
 }
 
