@@ -68,6 +68,9 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 		}
 	} else if (os == "Darwin") {
 
+		## from http://unix.stackexchange.com/a/712
+		resp <- system("sw_vers -productVersion", intern = TRUE)
+
     if (as.integer(strsplit(resp, "\\.")[[1]][2]) < 9) {
 			cat("The version of OSX on your mac is no longer supported by R. You will need to upgrade the OS before proceeding\n\n")
     } else {
