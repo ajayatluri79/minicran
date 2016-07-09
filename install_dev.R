@@ -14,6 +14,7 @@ build <- function() {
 	install.packages("devtools", type = 'binary')
 	install.packages("roxygen2", type = 'binary')
 	install.packages("testthat", type = 'binary')
+	install.packages("gitgadget", type = 'binary')
 }
 
 readliner <- function(text, inp = "", resp = "[yYnN]") {
