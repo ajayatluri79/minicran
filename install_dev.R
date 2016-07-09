@@ -64,7 +64,7 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 			URL <- paste0("http:",regmatches(page,regexpr(pat,page))[1])
 			installr::install.URL(URL)
 
-			cat("\n\nInstallation on Windows complete. Start Rstudio and select Radiant\nfrom the Addins menu to get started\n\n")
+			cat("\n\nInstallation on Windows complete. Close R and start Rstudio\n\n")
 		}
 	} else if (os == "Darwin") {
 
@@ -120,7 +120,7 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 				# path <- list.files("/Volumes", pattern = "RStudio*", full.names = TRUE)
 				# system(paste0("hdiutil unmount ", path))
 			}
-			cat("\n\nInstallation on Mac complete.\n\n")
+			cat("\n\nInstallation on Mac complete. Close R and start Rstudio\n\n")
 		}
 	} else {
 		cat("\n\nThe install script is not currently supported on your OS")
