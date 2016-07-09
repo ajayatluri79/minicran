@@ -2,7 +2,7 @@
 ### RUN OUTSIDE OF RADIANT
 ###############################################################
 # installing and loading packages
-repos <- "https://cran.rstudio.com"
+repos <- c("https://radiant-rstats.github.io/minicran/", "https://cloud.r-project.org")
 options(repos = c(CRAN = repos))
 
 #install.packages("devtools")
@@ -10,11 +10,8 @@ library(devtools)
 #install.packages("miniCRAN")
 library(miniCRAN)
 
-repos <- c("https://radiant-rstats.github.io/minicran/", "https://cloud.r-project.org")
-options(repos = c(CRAN = repos))
-
 pth <- "~/gh/minicran"
-pkgs = c("radiant")
+pkgs = c("radiant", "gitgadget")
 
 # building minicran for source packages
 pkgList <- pkgDep(pkgs, repos = repos, type = "source", suggests = FALSE)
@@ -54,6 +51,3 @@ for(pdir in pdirs) {
 tools::write_PACKAGES(file.path(pth, "bin/windows/contrib/3.3/"), type = "win.binary")
 tools::write_PACKAGES(file.path(pth, "bin/macosx/mavericks/contrib/3.3/"), type = "mac.binary")
 tools::write_PACKAGES(file.path(pth, "src/contrib/"), type = "source")
-
-
-
