@@ -82,13 +82,13 @@ Archs: curl.so.dSYM
 MD5sum: 00287a8551f2c1da4d787a651c4d3171
 
 Package: data.tree
-Version: 0.3.5
+Version: 0.4.0
 Depends: R (>= 3.0)
 Imports: R6, stringr, methods, DiagrammeR
-Suggests: graphics, testthat, knitr, ape, yaml, networkD3, jsonlite, igraph, treemap,
-          doParallel, foreach, htmlwidgets
+Suggests: Formula, graphics, testthat, knitr, ape, yaml, networkD3, jsonlite, igraph, treemap,
+          doParallel, party, partykit, foreach
 License: GPL (>= 2)
-MD5sum: 5ab679f0a4030908af585ee4c9f3d015
+MD5sum: 1ee96c5845a3e238062609a36287702a
 
 Package: DBI
 Version: 0.4-1
@@ -229,12 +229,12 @@ License: MIT + file LICENSE
 MD5sum: 50ee6680bfd591fda9c5bdf5d77ce148
 
 Package: jsonlite
-Version: 0.9.22
+Version: 1.0
 Depends: methods
 Suggests: httr, curl, plyr, testthat, knitr, rmarkdown, R.rsp
 License: MIT + file LICENSE
 Archs: jsonlite.so.dSYM
-MD5sum: 1669185c118675d3dcd686851844af1f
+MD5sum: 40c0a2e8b438f47b33d979cbe6df061c
 
 Package: knitr
 Version: 1.13
@@ -346,11 +346,17 @@ Archs: mgcv.so.dSYM
 MD5sum: 16a69f26c860af361c79ae6734d3b3ec
 
 Package: mime
-Version: 0.4
+Version: 0.5
 Imports: tools
-License: GPL-2
+License: GPL
 Archs: mime.so.dSYM
-MD5sum: e3f19bfa9cdd1eac6e4fe3555133d062
+MD5sum: 324a147ccb700960dacefdc2169b1db6
+
+Package: miniUI
+Version: 0.1.1
+Imports: shiny (>= 0.13), htmltools (>= 0.3), utils
+License: GPL-3
+MD5sum: 0081e073ef2168167feafe93de29e1b3
 
 Package: minqa
 Version: 1.2.4
@@ -581,11 +587,11 @@ License: MIT + file LICENSE
 MD5sum: 18b78e18ec684bbecab73a1c0286678c
 
 Package: rsvg
-Version: 0.5
+Version: 0.6
 Suggests: svglite, png, jpeg, webp, ggplot2
 License: MIT + file LICENSE
 Archs: rsvg.so.dSYM
-MD5sum: 323feeb69e8195e463ced60fd8288503
+MD5sum: 7d5cfe9393d134291afb3b04406b5ffd
 
 Package: sandwich
 Version: 2.3-4
@@ -664,14 +670,14 @@ License: GPL-2
 MD5sum: 4c5366b2690343699028f71b1fc8ba03
 
 Package: tibble
-Version: 1.0
+Version: 1.1
 Depends: R (>= 3.1.2)
 Imports: methods, assertthat, utils, lazyeval (>= 0.1.10), Rcpp
 LinkingTo: Rcpp
-Suggests: testthat, withr, knitr, rmarkdown, Lahman (>= 3.0.1), microbenchmark
+Suggests: testthat, withr, knitr (>= 1.5.32), rmarkdown, Lahman (>= 3.0.1), microbenchmark
 License: MIT + file LICENSE
 Archs: tibble.so.dSYM
-MD5sum: eb6b580c94992b12a3e14dd191e9fb7e
+MD5sum: c32f7ae6a12d7735bb49caa0ad17f7d4
 
 Package: tidyr
 Version: 0.5.1

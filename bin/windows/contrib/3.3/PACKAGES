@@ -71,11 +71,11 @@ License: MIT + file LICENSE
 Archs: i386, x64
 
 Package: data.tree
-Version: 0.3.5
+Version: 0.4.0
 Depends: R (>= 3.0)
 Imports: R6, stringr, methods, DiagrammeR
-Suggests: graphics, testthat, knitr, ape, yaml, networkD3, jsonlite, igraph, treemap,
-          doParallel, foreach, htmlwidgets
+Suggests: Formula, graphics, testthat, knitr, ape, yaml, networkD3, jsonlite, igraph, treemap,
+          doParallel, party, partykit, foreach
 License: GPL (>= 2)
 
 Package: DBI
@@ -200,7 +200,7 @@ Suggests: knitr
 License: MIT + file LICENSE
 
 Package: jsonlite
-Version: 0.9.22
+Version: 1.0
 Depends: methods
 Suggests: httr, curl, plyr, testthat, knitr, rmarkdown, R.rsp
 License: MIT + file LICENSE
@@ -304,10 +304,15 @@ License: GPL (>= 2)
 Archs: i386, x64
 
 Package: mime
-Version: 0.4
+Version: 0.5
 Imports: tools
-License: GPL-2
+License: GPL
 Archs: i386, x64
+
+Package: miniUI
+Version: 0.1.1
+Imports: shiny (>= 0.13), htmltools (>= 0.3), utils
+License: GPL-3
 
 Package: minqa
 Version: 1.2.4
@@ -512,7 +517,7 @@ Suggests: testthat
 License: MIT + file LICENSE
 
 Package: rsvg
-Version: 0.5
+Version: 0.6
 Suggests: svglite, png, jpeg, webp, ggplot2
 License: MIT + file LICENSE
 Archs: i386, x64
@@ -586,11 +591,11 @@ Suggests: testthat, knitr
 License: GPL-2
 
 Package: tibble
-Version: 1.0
+Version: 1.1
 Depends: R (>= 3.1.2)
 Imports: methods, assertthat, utils, lazyeval (>= 0.1.10), Rcpp
 LinkingTo: Rcpp
-Suggests: testthat, withr, knitr, rmarkdown, Lahman (>= 3.0.1), microbenchmark
+Suggests: testthat, withr, knitr (>= 1.5.32), rmarkdown, Lahman (>= 3.0.1), microbenchmark
 License: MIT + file LICENSE
 Archs: i386, x64
 

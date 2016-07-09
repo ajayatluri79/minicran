@@ -87,13 +87,13 @@ MD5sum: a101f7de948cb828fef571c730f39217
 NeedsCompilation: yes
 
 Package: data.tree
-Version: 0.3.5
+Version: 0.4.0
 Depends: R (>= 3.0)
 Imports: R6, stringr, methods, DiagrammeR
-Suggests: graphics, testthat, knitr, ape, yaml, networkD3, jsonlite, igraph, treemap,
-          doParallel, foreach, htmlwidgets
+Suggests: Formula, graphics, testthat, knitr, ape, yaml, networkD3, jsonlite, igraph, treemap,
+          doParallel, party, partykit, foreach
 License: GPL (>= 2)
-MD5sum: ebbca10bd03179d7eb9bb71ffcbc2cc6
+MD5sum: e1b50c6f1541e84dab7c362094ba175b
 NeedsCompilation: no
 
 Package: DBI
@@ -369,11 +369,18 @@ MD5sum: 78c607a4ddcb6c02f29ccd96bc59ebbc
 NeedsCompilation: yes
 
 Package: mime
-Version: 0.4
+Version: 0.5
 Imports: tools
-License: GPL-2
-MD5sum: 789cb33e41db2206c6fc7c3e9fbc2c02
+License: GPL
+MD5sum: 87e00b6d57b581465c19ae869a723c4d
 NeedsCompilation: yes
+
+Package: miniUI
+Version: 0.1.1
+Imports: shiny (>= 0.13), htmltools (>= 0.3), utils
+License: GPL-3
+MD5sum: bad9533f55ccc829e828f456d3ff2b56
+NeedsCompilation: no
 
 Package: minqa
 Version: 1.2.4
@@ -601,13 +608,13 @@ MD5sum: 41e9dffdf5c6fa830321ac9c8ebffe00
 NeedsCompilation: yes
 
 Package: rmarkdown
-Version: 0.9.6
+Version: 1.0
 Depends: R (>= 3.0)
-Imports: tools, utils, grDevices, knitr (>= 1.12), yaml (>= 2.1.5), htmltools (>= 0.2.4),
-          caTools
+Imports: tools, utils, grDevices, knitr (>= 1.13), yaml (>= 2.1.5), htmltools (>= 0.2.4),
+          caTools, evaluate, base64enc, jsonlite
 Suggests: shiny (>= 0.11), tufte, testthat, digest
 License: GPL-3
-MD5sum: 6b2a9a0da4112b0b9e2ec2b27a8661e2
+MD5sum: 264aa6a59e9680109e38df8270e14c58
 NeedsCompilation: no
 
 Package: rstudioapi
@@ -618,10 +625,10 @@ MD5sum: fdb13bf46aab02421557e713fceab66b
 NeedsCompilation: no
 
 Package: rsvg
-Version: 0.5
+Version: 0.6
 Suggests: svglite, png, jpeg, webp, ggplot2
 License: MIT + file LICENSE
-MD5sum: e52facda2b9018bbe23d0955a4fcf14f
+MD5sum: 14067b49acb14d0803a145c69870fdc5
 NeedsCompilation: yes
 
 Package: sandwich
@@ -706,13 +713,13 @@ MD5sum: 5ca977c90351f78b1b888b379114a7b4
 NeedsCompilation: no
 
 Package: tibble
-Version: 1.0
+Version: 1.1
 Depends: R (>= 3.1.2)
 Imports: methods, assertthat, utils, lazyeval (>= 0.1.10), Rcpp
 LinkingTo: Rcpp
-Suggests: testthat, withr, knitr, rmarkdown, Lahman (>= 3.0.1), microbenchmark
+Suggests: testthat, withr, knitr (>= 1.5.32), rmarkdown, Lahman (>= 3.0.1), microbenchmark
 License: MIT + file LICENSE
-MD5sum: 8e116104726a78ec6d3a93afde58c563
+MD5sum: 2fe9f806109d0b7fadafb1ffafea4cb8
 NeedsCompilation: yes
 
 Package: tidyr
