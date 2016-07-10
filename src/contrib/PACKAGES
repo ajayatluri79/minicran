@@ -183,7 +183,7 @@ Depends: R (>= 3.3.0)
 Imports: shiny (>= 0.13.2), miniUI (>= 0.1.1), rstudioapi (>= 0.6), curl (>= 0.9), jsonlite,
           dplyr (>= 0.5), methods
 License: GPL-3
-MD5sum: 91c97740df3aee8df78df80df9d960e0
+MD5sum: 7a4c505e3abb021c3692f1b7bdc1d25e
 NeedsCompilation: no
 
 Package: gridExtra
