@@ -7,14 +7,16 @@ repos <- c("https://radiant-rstats.github.io/minicran/", "https://cran.rstudio.c
 options(repos = c(CRAN = repos))
 
 build <- function() {
-	if (!"radiant" %in% installed.packages())
-	  install.packages("radiant", type = 'binary')
-
 	suppressWarnings(update.packages(ask = FALSE, repos = "https://radiant-rstats.github.io/minicran/", type = "binary"))
-	install.packages("devtools", type = 'binary')
-	install.packages("roxygen2", type = 'binary')
-	install.packages("testthat", type = 'binary')
-	install.packages("gitgadget", type = 'binary')
+	install <- function(x) {
+		if (!x %in% installed.packages())
+			install.packages(x, type = 'binary')
+	}
+
+	resp <- sapply(
+		c("radiant", "devtools", "roxygen2", "testthat", "gitgadget", "lintr"),
+		install
+	)
 }
 
 readliner <- function(text, inp = "", resp = "[yYnN]") {
