@@ -4,10 +4,17 @@ repos <- c("https://radiant-rstats.github.io/minicran/", "https://cran.rstudio.c
 options(repos = c(CRAN = repos))
 
 build <- function() {
-	if (!"radiant" %in% installed.packages())
-	  install.packages("radiant", type = 'binary')
 	suppressWarnings(update.packages(ask = FALSE, repos = "https://radiant-rstats.github.io/minicran/", type = "binary"))
-	install.packages("miniUI", repos = "https://cran.rstudio.com", type = "binary")
+	install <- function(x) {
+		if (!x %in% installed.packages())
+			install.packages(x, type = 'binary')
+	}
+
+	resp <- sapply(
+		c("radiant", "miniUI"),
+		install
+	)
+
 	install.packages("webshot", repos = "https://cran.rstudio.com", type = "binary")
 	if (Sys.which("phantomjs") == "") eval(parse(text = "webshot::install_phantomjs()"))
 }
