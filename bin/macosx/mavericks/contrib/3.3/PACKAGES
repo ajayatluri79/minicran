@@ -170,7 +170,7 @@ Depends: R (>= 3.3.0)
 Imports: shiny (>= 0.13.2), miniUI (>= 0.1.1), rstudioapi (>= 0.6), curl (>= 0.9), jsonlite,
           dplyr (>= 0.5), methods
 License: GPL-3
-MD5sum: 5993fb6365e4947fafb6f9791b4caa60
+MD5sum: 620e421eb0a1d460299d60d33766a978
 
 Package: gridExtra
 Version: 2.2.1
