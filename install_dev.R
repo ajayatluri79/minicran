@@ -14,7 +14,7 @@ build <- function() {
 	}
 
 	resp <- sapply(
-		c("radiant", "devtools", "roxygen2", "testthat", "gitgadget", "lintr", "miniUI"),
+		c("radiant", "devtools", "roxygen2", "testthat", "gitgadget", "lintr", "haven", "readxl", "miniUI"),
 		install
 	)
 }

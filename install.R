@@ -11,7 +11,7 @@ build <- function() {
 	}
 
 	resp <- sapply(
-		c("radiant", "miniUI"),
+		c("radiant", "haven", "readxl", "miniUI"),
 		install
 	)
 
