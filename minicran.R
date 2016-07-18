@@ -2,6 +2,7 @@
 ### RUN OUTSIDE OF RADIANT
 ###############################################################
 # installing and loading packages
+# repos <- "https://cloud.r-project.org"
 repos <- c("https://radiant-rstats.github.io/minicran/", "https://cloud.r-project.org")
 options(repos = c(CRAN = repos))
 
@@ -11,7 +12,7 @@ library(devtools)
 library(miniCRAN)
 
 pth <- "~/gh/minicran"
-pkgs = c("radiant", "gitgadget")
+pkgs = c("DiagrammeR")
 
 # building minicran for source packages
 pkgList <- pkgDep(pkgs, repos = repos, type = "source", suggests = FALSE)
