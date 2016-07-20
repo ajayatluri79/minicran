@@ -207,8 +207,8 @@ NeedsCompilation: no
 Package: gitgadget
 Version: 0.13
 Depends: R (>= 3.3.0)
-Imports: shiny (>= 0.13.2), miniUI (>= 0.1.1), rstudioapi (>= 0.6), curl (>= 0.9), jsonlite, dplyr (>= 0.5),
-            methods
+Imports: shiny (>= 0.13.2), miniUI (>= 0.1.1), rstudioapi (>= 0.6), curl (>= 0.9), jsonlite, dplyr (>=
+            0.5), methods
 License: GPL-3
 MD5sum: b048efbaf772928f1dc1f3ecfd919dcb
 NeedsCompilation: no
@@ -330,8 +330,8 @@ Version: 1.13
 Depends: R (> 3.0.2)
 Imports: evaluate (>= 0.8), digest, formatR, highr, markdown, stringr (>= 0.6), yaml (>= 2.1.5), methods,
             tools
-Suggests: testit, rgl (>= 0.95.1201), codetools, rmarkdown, htmlwidgets, webshot, tikzDevice (>= 0.10), png,
-            jpeg, XML, RCurl
+Suggests: testit, rgl (>= 0.95.1201), codetools, rmarkdown, htmlwidgets, webshot, tikzDevice (>= 0.10),
+            png, jpeg, XML, RCurl
 License: GPL
 MD5sum: a9960a644fa30bc33505f3c5f176ca18
 NeedsCompilation: no
@@ -367,8 +367,8 @@ Depends: R (>= 3.0.2), Matrix (>= 1.1.1), methods, stats
 Imports: graphics, grid, splines, utils, parallel, MASS, lattice, nlme (>= 3.1-123), minqa (>= 1.1.15),
             nloptr (>= 1.0.4)
 LinkingTo: Rcpp (>= 0.10.5), RcppEigen
-Suggests: knitr, boot, PKPDmodels, MEMSS, testthat (>= 0.8.1), ggplot2, mlmRev, optimx (>= 2013.8.6), gamm4,
-            pbkrtest, HSAUR2, numDeriv
+Suggests: knitr, boot, PKPDmodels, MEMSS, testthat (>= 0.8.1), ggplot2, mlmRev, optimx (>= 2013.8.6),
+            gamm4, pbkrtest, HSAUR2, numDeriv
 License: GPL (>= 2)
 MD5sum: da8aaebb67477ecb5631851c46207804
 NeedsCompilation: yes
@@ -595,13 +595,13 @@ MD5sum: 9dfaf0efa81d08677d48297a6a4c90ec
 NeedsCompilation: no
 
 Package: radiant.basics
-Version: 0.5.5
+Version: 0.5.6
 Depends: R (>= 3.3.0), radiant.data (>= 0.5.5)
 Imports: ggplot2 (>= 2.0.0), gridExtra (>= 2.0.0), scales (>= 0.4.0), dplyr (>= 0.5), tidyr (>= 0.4.1),
             magrittr (>= 1.5), shiny (>= 0.13.2.9003), psych (>= 1.5.8), import (>= 1.1.0), methods
 Suggests: testthat (>= 1.0.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 21e93b0eab9c2283f82acb0b10018117
+MD5sum: 3850faabf5af4918ce3183492a6c37f1
 NeedsCompilation: no
 
 Package: radiant.data
@@ -704,8 +704,8 @@ NeedsCompilation: yes
 Package: rmarkdown
 Version: 1.0
 Depends: R (>= 3.0)
-Imports: tools, utils, grDevices, knitr (>= 1.13), yaml (>= 2.1.5), htmltools (>= 0.2.4), caTools, evaluate,
-            base64enc, jsonlite
+Imports: tools, utils, grDevices, knitr (>= 1.13), yaml (>= 2.1.5), htmltools (>= 0.2.4), caTools,
+            evaluate, base64enc, jsonlite
 Suggests: shiny (>= 0.11), tufte, testthat, digest
 License: GPL-3
 MD5sum: 264aa6a59e9680109e38df8270e14c58
