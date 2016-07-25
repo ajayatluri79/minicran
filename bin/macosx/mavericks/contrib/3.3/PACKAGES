@@ -577,7 +577,7 @@ Imports: shiny (>= 0.13.2.9003), dplyr (>= 0.5), ggplot2 (>= 2.0.0), gridExtra (
                     wordcloud (>= 2.5), import (>= 1.1.0), methods
 Suggests: testthat (>= 1.0.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 3b243601d3b68be787afdc0218e8f032
+MD5sum: 2ca452bcfb27dde349b8c81a7e028f8f
 
 Package: RColorBrewer
 Version: 1.1-2
