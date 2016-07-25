@@ -543,15 +543,6 @@ Imports: psych (>= 1.5.8), AlgDesign (>= 1.1.7.3), shiny (>= 0.13.2.9003), impor
 License: AGPL-3 | file LICENSE
 MD5sum: 0449943fd3b2122fe20e376607c37e94
 
-Package: radiant.basics
-Version: 0.5.7
-Depends: R (>= 3.3.0), radiant.data (>= 0.5.5)
-Imports: ggplot2 (>= 2.0.0), gridExtra (>= 2.0.0), scales (>= 0.4.0), dplyr (>= 0.5), tidyr (>= 0.4.1), magrittr (>= 1.5), shiny (>= 0.13.2.9003), psych (>= 1.5.8), import (>=
-                    1.1.0), methods
-Suggests: testthat (>= 1.0.0), covr (>= 1.2.0)
-License: AGPL-3 | file LICENSE
-MD5sum: d2ca4590ea00f46eccefddc0739e93b1
-
 Package: radiant.data
 Version: 0.5.6
 Depends: R (>= 3.3.0), magrittr (>= 1.5), ggplot2 (>= 2.0.0), lubridate (>= 1.5.0), tidyr (>= 0.4.1), dplyr (>= 0.5)
@@ -580,13 +571,13 @@ License: AGPL-3 | file LICENSE
 MD5sum: 8a74b4b01984a0ea8a00e549e91fc610
 
 Package: radiant.multivariate
-Version: 0.5.5
-Depends: R (>= 3.3.0), radiant.data (>= 0.5.5)
+Version: 0.5.6
+Depends: R (>= 3.3.0), radiant.data (>= 0.5.6)
 Imports: shiny (>= 0.13.2.9003), dplyr (>= 0.5), ggplot2 (>= 2.0.0), gridExtra (>= 2.0.0), scales (>= 0.4.0), magrittr (>= 1.5), psych (>= 1.5.8), car (>= 2.1.1), MASS (>= 7.3),
                     wordcloud (>= 2.5), import (>= 1.1.0), methods
 Suggests: testthat (>= 1.0.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
-MD5sum: aee40526b7d05e2f51fe4ca7563420f6
+MD5sum: 3b243601d3b68be787afdc0218e8f032
 
 Package: RColorBrewer
 Version: 1.1-2
