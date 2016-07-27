@@ -597,7 +597,7 @@ Imports: tibble (>= 1.1), broom (>= 0.4.0), car (>= 2.1.1), gridExtra (>= 2.0.0)
                     (>= 1.1.0), base64enc, methods
 Suggests: testthat (>= 1.0.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 9106d3a0d01375704ca748b7c914febb
+MD5sum: 096ad5b72416911cb9b452fcc45d45a3
 NeedsCompilation: no
 
 Package: radiant.design
