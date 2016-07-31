@@ -9,10 +9,10 @@ build <- function() {
 		if (!x %in% installed.packages()) install.packages(x, type = 'binary')
 	}
 
-	resp <- sapply(c("radiant", "haven", "readxl", "miniUI"), install)
+	resp <- sapply(c("radiant", "haven", "readxl", "miniUI", "webshot"), install)
 
-	install.packages("webshot", repos = "https://cran.rstudio.com", type = "binary")
-	if (Sys.which("phantomjs") == "") eval(parse(text = "webshot::install_phantomjs()"))
+	# see https://github.com/wch/webshot/issues/25#event-740360519
+	if (is.null(webshot:::find_phantom())) webshot::install_phantomjs()
 }
 
 readliner <- function(text, inp = "", resp = "[yYnN]") {
