@@ -12,7 +12,7 @@ library(devtools)
 library(miniCRAN)
 
 pth <- "~/gh/minicran"
-pkgs = c("DiagrammeR")
+pkgs = c("radiant.design")
 
 # building minicran for source packages
 pkgList <- pkgDep(pkgs, repos = repos, type = "source", suggests = FALSE)
