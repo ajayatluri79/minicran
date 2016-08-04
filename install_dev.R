@@ -1,7 +1,5 @@
 ## install script for R(adiant) @ Rady School of Management (MBA)
-cdir <- getwd()
-tmp <- tempdir()
-setwd(tmp)
+owd <- setwd(tempdir())
 
 repos <- c("https://radiant-rstats.github.io/minicran/", "https://cran.rstudio.com")
 options(repos = c(CRAN = repos))
@@ -9,8 +7,7 @@ options(repos = c(CRAN = repos))
 build <- function() {
 	suppressWarnings(update.packages(ask = FALSE, repos = "https://radiant-rstats.github.io/minicran/", type = "binary"))
 	install <- function(x) {
-		if (!x %in% installed.packages())
-			install.packages(x, type = 'binary')
+		if (!x %in% installed.packages()) install.packages(x, type = 'binary')
 	}
 
 	resp <- sapply(
@@ -130,4 +127,4 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 	}
 }
 
-setwd(cdir)
+setwd(owd)
