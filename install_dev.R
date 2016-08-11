@@ -17,10 +17,8 @@ build <- function() {
 }
 
 readliner <- function(text, inp = "", resp = "[yYnN]") {
-	while (!grepl(resp, inp))
-		inp <- readline(text)
-
-	return(inp)
+	while (!grepl(resp, inp)) inp <- readline(text)
+	inp
 }
 
 rv <- R.Version()
