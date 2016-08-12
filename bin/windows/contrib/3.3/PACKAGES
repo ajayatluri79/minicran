@@ -27,10 +27,10 @@ Archs: i386, x64
 Package: broom
 Version: 0.4.1
 Imports: plyr, dplyr, tidyr, psych, stringr, reshape2, nlme, methods
-Suggests: knitr, boot, survival, gam, glmnet, lfe, Lahman, MASS, sp, maps, maptools, multcomp, testthat,
-            lme4, zoo, lmtest, plm, biglm, ggplot2, nnet, geepack, AUC, ergm, network, statnet.common,
-            xergm, btergm, binGroup, Hmisc, bbmle, gamlss, rstan, rstanarm, coda, gmm, Matrix, ks, purrr,
-            orcutt, mgcv, lmodel2, poLCA, mclust, covr
+Suggests: knitr, boot, survival, gam, glmnet, lfe, Lahman, MASS, sp, maps, maptools, multcomp, testthat, lme4,
+            zoo, lmtest, plm, biglm, ggplot2, nnet, geepack, AUC, ergm, network, statnet.common, xergm,
+            btergm, binGroup, Hmisc, bbmle, gamlss, rstan, rstanarm, coda, gmm, Matrix, ks, purrr, orcutt,
+            mgcv, lmodel2, poLCA, mclust, covr
 License: MIT + file LICENSE
 
 Package: car
@@ -124,8 +124,8 @@ Version: 0.5.0
 Depends: R (>= 3.1.2)
 Imports: assertthat, utils, R6, Rcpp (>= 0.12.3), tibble, magrittr, lazyeval (>= 0.1.10), DBI (>= 0.4.1)
 LinkingTo: Rcpp (>= 0.12.0), BH (>= 1.58.0-1)
-Suggests: RSQLite (>= 1.0.0), RMySQL, RPostgreSQL, testthat, knitr, microbenchmark, ggplot2, mgcv, Lahman
-            (>= 3.0-1), nycflights13, methods, rmarkdown, covr, dtplyr
+Suggests: RSQLite (>= 1.0.0), RMySQL, RPostgreSQL, testthat, knitr, microbenchmark, ggplot2, mgcv, Lahman (>=
+            3.0-1), nycflights13, methods, rmarkdown, covr, dtplyr
 License: MIT + file LICENSE
 Archs: i386, x64
 
@@ -160,13 +160,13 @@ Package: ggplot2
 Version: 2.1.0
 Depends: R (>= 3.1)
 Imports: digest, grid, gtable (>= 0.1.1), MASS, plyr (>= 1.7.1), reshape2, scales (>= 0.3.0), stats
-Suggests: covr, ggplot2movies, hexbin, Hmisc, lattice, mapproj, maps, maptools, mgcv, multcomp, nlme,
-            testthat (>= 0.11.0), quantreg, knitr, rpart, rmarkdown, svglite
+Suggests: covr, ggplot2movies, hexbin, Hmisc, lattice, mapproj, maps, maptools, mgcv, multcomp, nlme, testthat
+            (>= 0.11.0), quantreg, knitr, rpart, rmarkdown, svglite
 Enhances: sp
 License: GPL-2
 
 Package: gitgadget
-Version: 0.16
+Version: 0.17
 Depends: R (>= 3.3.0)
 Imports: shiny (>= 0.13.2), miniUI (>= 0.1.1), rstudioapi (>= 0.6), curl (>= 0.9), jsonlite (>= 1.0), dplyr
             (>= 0.5), methods
@@ -274,8 +274,8 @@ Version: 1.13
 Depends: R (> 3.0.2)
 Imports: evaluate (>= 0.8), digest, formatR, highr, markdown, stringr (>= 0.6), yaml (>= 2.1.5), methods,
             tools
-Suggests: testit, rgl (>= 0.95.1201), codetools, rmarkdown, htmlwidgets, webshot, tikzDevice (>= 0.10),
-            png, jpeg, XML, RCurl
+Suggests: testit, rgl (>= 0.95.1201), codetools, rmarkdown, htmlwidgets, webshot, tikzDevice (>= 0.10), png,
+            jpeg, XML, RCurl
 License: GPL
 
 Package: labeling
@@ -302,11 +302,11 @@ Archs: i386, x64
 Package: lme4
 Version: 1.1-12
 Depends: R (>= 3.0.2), Matrix (>= 1.1.1), methods, stats
-Imports: graphics, grid, splines, utils, parallel, MASS, lattice, nlme (>= 3.1-123), minqa (>= 1.1.15),
-            nloptr (>= 1.0.4)
+Imports: graphics, grid, splines, utils, parallel, MASS, lattice, nlme (>= 3.1-123), minqa (>= 1.1.15), nloptr
+            (>= 1.0.4)
 LinkingTo: Rcpp (>= 0.10.5), RcppEigen
-Suggests: knitr, boot, PKPDmodels, MEMSS, testthat (>= 0.8.1), ggplot2, mlmRev, optimx (>= 2013.8.6),
-            gamm4, pbkrtest, HSAUR2, numDeriv
+Suggests: knitr, boot, PKPDmodels, MEMSS, testthat (>= 0.8.1), ggplot2, mlmRev, optimx (>= 2013.8.6), gamm4,
+            pbkrtest, HSAUR2, numDeriv
 License: GPL (>= 2)
 Archs: i386, x64
 
@@ -430,8 +430,8 @@ Version: 0.20.6
 Depends: R (>= 3.0.0), methods, utils, pkgmaker (>= 0.20), registry, rngtools (>= 1.2.3), cluster
 Imports: graphics, stats, stringr (>= 1.0.0), digest, grid, grDevices, gridBase, colorspace, RColorBrewer,
             foreach, doParallel, ggplot2, reshape2
-Suggests: RcppOctave (>= 0.11), fastICA, doMPI, bigmemory (>= 4.2), synchronicity, corpcor, xtable,
-            devtools, knitr, bibtex, RUnit, mail, Biobase
+Suggests: RcppOctave (>= 0.11), fastICA, doMPI, bigmemory (>= 4.2), synchronicity, corpcor, xtable, devtools,
+            knitr, bibtex, RUnit, mail, Biobase
 License: GPL (>= 2)
 Archs: i386, x64
 
@@ -522,16 +522,15 @@ Depends: R (>= 3.3.0), magrittr (>= 1.5), ggplot2 (>= 2.0.0), lubridate (>= 1.5.
             (>= 0.5)
 Imports: tibble (>= 1.1), broom (>= 0.4.0), car (>= 2.1.1), gridExtra (>= 2.0.0), knitr (>= 1.13),
             rmarkdown(>= 0.9.5), markdown (>= 0.7.7), pryr (>= 0.1.2), shiny (>= 0.13.2), jsonlite (>=
-            0.9.17), shinyAce (>= 0.2.1), psych (>= 1.5.8), DT (>= 0.2), readr (>= 1.0.0), scales (>=
-            0.4.0), curl (>= 1.1.0), rstudioapi (>= 0.5), import (>= 1.0.0), base64enc, methods
+            0.9.17), shinyAce (>= 0.2.1), psych (>= 1.5.8), DT (>= 0.2), readr (>= 1.0.0), scales (>= 0.4.0),
+            curl (>= 1.1.0), rstudioapi (>= 0.5), import (>= 1.0.0), base64enc, methods
 Suggests: testthat (>= 1.0.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
 
 Package: radiant.design
 Version: 0.5.7
 Depends: R (>= 3.3.0), radiant.data (>= 0.5.11), mvtnorm
-Imports: dplyr (>= 0.5), shiny (>= 0.13.2.9003), AlgDesign (>= 1.1.7.3), import (>= 1.1.0), polycor,
-            methods
+Imports: dplyr (>= 0.5), shiny (>= 0.13.2.9003), AlgDesign (>= 1.1.7.3), import (>= 1.1.0), polycor, methods
 License: AGPL-3 | file LICENSE
 
 Package: radiant.model
@@ -547,9 +546,9 @@ License: AGPL-3 | file LICENSE
 Package: radiant.multivariate
 Version: 0.5.8
 Depends: R (>= 3.3.0), radiant.data (>= 0.5.11)
-Imports: shiny (>= 0.13.2.9003), dplyr (>= 0.5), ggplot2 (>= 2.0.0), gridExtra (>= 2.0.0), scales (>=
-            0.4.0), magrittr (>= 1.5), psych (>= 1.5.8), car (>= 2.1.1), MASS (>= 7.3), wordcloud (>= 2.5),
-            import (>= 1.1.0), methods
+Imports: shiny (>= 0.13.2.9003), dplyr (>= 0.5), ggplot2 (>= 2.0.0), gridExtra (>= 2.0.0), scales (>= 0.4.0),
+            magrittr (>= 1.5), psych (>= 1.5.8), car (>= 2.1.1), MASS (>= 7.3), wordcloud (>= 2.5), import (>=
+            1.1.0), methods
 Suggests: testthat (>= 1.0.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
 
@@ -601,8 +600,8 @@ Archs: i386, x64
 Package: rmarkdown
 Version: 1.0
 Depends: R (>= 3.0)
-Imports: tools, utils, grDevices, knitr (>= 1.13), yaml (>= 2.1.5), htmltools (>= 0.2.4), caTools,
-            evaluate, base64enc, jsonlite
+Imports: tools, utils, grDevices, knitr (>= 1.13), yaml (>= 2.1.5), htmltools (>= 0.2.4), caTools, evaluate,
+            base64enc, jsonlite
 Suggests: shiny (>= 0.11), tufte, testthat, digest
 License: GPL-3
 
@@ -645,8 +644,8 @@ License: GPL (>= 2)
 Package: shiny
 Version: 0.13.2.9004
 Depends: R (>= 3.0.0), methods
-Imports: utils, httpuv (>= 1.3.3), mime (>= 0.3), jsonlite (>= 0.9.16), xtable, digest, htmltools (>=
-            0.3.5), R6 (>= 2.0), sourcetools
+Imports: utils, httpuv (>= 1.3.3), mime (>= 0.3), jsonlite (>= 0.9.16), xtable, digest, htmltools (>= 0.3.5),
+            R6 (>= 2.0), sourcetools
 Suggests: datasets, Cairo (>= 1.5-5), testthat, knitr (>= 1.6), markdown, rmarkdown, ggplot2
 License: GPL-3 | file LICENSE
 
