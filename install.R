@@ -47,7 +47,6 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 			pat <- "//s3.amazonaws.com/rstudio-dailybuilds/RStudio-[0-9.]+.exe"
 			URL <- paste0("https:",regmatches(page,regexpr(pat,page))[1])
 			installr::install.URL(URL, installer_option = "/S")
-			# installr::install.URL(URL)
 
 			wz <- suppressWarnings(system("where R", intern = TRUE))
 			if (!grepl("zip", wz)) {
@@ -57,11 +56,11 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 				} else if (file.exists(file.path(Sys.getenv("ProgramFiles(x86)"), "7-Zip"))) {
 					shell(paste0("setx PATH \"", paste0(Sys.getenv("ProgramFiles(x86)"), "\\7-Zip\"")))
 				} else {
-					cat("Couldn't find the location where 7-zip was installed. Update the system path manually")
+					cat("Couldn't find the location where 7-zip was installed. Update the system path manually\n")
 				}
 			}
 
-			cat("To generate PDF reports in Radiant you will need MikTex. This is a large\ndownload (approx 100MB).\n")
+			cat("\nTo generate PDF reports in Radiant you will need MikTex. This is a large\ndownload (approx 100MB).\n")
 			inp <- readliner("Proceed with the install? Press y or n and then press return: ")
 			if (grepl("[yY]", inp)) {
 				ver <- if (grepl("64",Sys.getenv()["PROCESSOR_IDENTIFIER"])) 64 else 32
