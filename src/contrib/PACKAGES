@@ -107,11 +107,11 @@ MD5sum: e1b50c6f1541e84dab7c362094ba175b
 NeedsCompilation: no
 
 Package: DBI
-Version: 0.4-1
+Version: 0.5
 Depends: R (>= 2.15.0), methods
-Suggests: testthat, RSQLite, knitr, covr
+Suggests: testthat, RSQLite, knitr, rmarkdown, covr
 License: LGPL (>= 2)
-MD5sum: c7ee8f1c5037c2284e99c62698d0f087
+MD5sum: b64f996b14b3ee6e08049dd85ede3881
 NeedsCompilation: no
 
 Package: DiagrammeR
@@ -851,13 +851,13 @@ MD5sum: 2fe9f806109d0b7fadafb1ffafea4cb8
 NeedsCompilation: yes
 
 Package: tidyr
-Version: 0.5.1
+Version: 0.6.0
 Depends: R (>= 3.1.0)
 Imports: tibble, dplyr (>= 0.4), stringi, lazyeval, magrittr, Rcpp
 LinkingTo: Rcpp
 Suggests: knitr, testthat, covr, gapminder, rmarkdown
 License: MIT + file LICENSE
-MD5sum: 3cadc869510c054ed93d374ab44120bd
+MD5sum: 3ae4f15f8513f2d28328c8d658f99a93
 NeedsCompilation: yes
 
 Package: visNetwork

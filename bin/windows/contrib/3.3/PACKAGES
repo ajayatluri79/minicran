@@ -88,9 +88,9 @@ Suggests: Formula, graphics, testthat, knitr, ape, yaml, networkD3, jsonlite, ig
 License: GPL (>= 2)
 
 Package: DBI
-Version: 0.4-1
+Version: 0.5
 Depends: R (>= 2.15.0), methods
-Suggests: testthat, RSQLite, knitr, covr
+Suggests: testthat, RSQLite, knitr, rmarkdown, covr
 License: LGPL (>= 2)
 
 Package: DiagrammeR
@@ -702,7 +702,7 @@ License: MIT + file LICENSE
 Archs: i386, x64
 
 Package: tidyr
-Version: 0.5.1
+Version: 0.6.0
 Depends: R (>= 3.1.0)
 Imports: tibble, dplyr (>= 0.4), stringi, lazyeval, magrittr, Rcpp
 LinkingTo: Rcpp
