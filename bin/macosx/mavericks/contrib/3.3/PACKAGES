@@ -32,21 +32,21 @@ MD5sum: 5aa84aa9a661caacf22a55109ba56da3
 Package: broom
 Version: 0.4.1
 Imports: plyr, dplyr, tidyr, psych, stringr, reshape2, nlme, methods
-Suggests: knitr, boot, survival, gam, glmnet, lfe, Lahman, MASS, sp, maps, maptools, multcomp, testthat, lme4,
-            zoo, lmtest, plm, biglm, ggplot2, nnet, geepack, AUC, ergm, network, statnet.common, xergm, btergm,
+Suggests: knitr, boot, survival, gam, glmnet, lfe, Lahman, MASS, sp, maps, maptools, multcomp, testthat, lme4, zoo,
+            lmtest, plm, biglm, ggplot2, nnet, geepack, AUC, ergm, network, statnet.common, xergm, btergm,
             binGroup, Hmisc, bbmle, gamlss, rstan, rstanarm, coda, gmm, Matrix, ks, purrr, orcutt, mgcv, lmodel2,
             poLCA, mclust, covr
 License: MIT + file LICENSE
 MD5sum: 671f2a54207e0ad4eed87ef26866a3fc
 
 Package: car
-Version: 2.1-2
+Version: 2.1-3
 Depends: R (>= 3.2.0)
 Imports: MASS, mgcv, nnet, pbkrtest (>= 0.4-4), quantreg, grDevices, utils, stats, graphics
-Suggests: alr4, boot, coxme, leaps, lme4, lmtest, Matrix, MatrixModels, nlme, rgl (>= 0.93.960), sandwich,
-            SparseM, survival, survey
+Suggests: alr4, boot, coxme, leaps, lme4, lmtest, Matrix, MatrixModels, nlme, rgl (>= 0.93.960), sandwich, SparseM,
+            survival, survey
 License: GPL (>= 2)
-MD5sum: 10fa7bf2179cb537807ec576f38e01f2
+MD5sum: af2265f07bb0b628a4ba35f859bb6de2
 
 Package: caTools
 Version: 1.17.1
@@ -84,12 +84,12 @@ Archs: colorspace.so.dSYM
 MD5sum: a991f16eb49ba4f9980f975236700a1f
 
 Package: curl
-Version: 1.1
+Version: 1.2
 Depends: R (>= 3.0.0)
 Suggests: testthat (>= 1.0.0), knitr, jsonlite, rmarkdown, magrittr
 License: MIT + file LICENSE
 Archs: curl.so.dSYM
-MD5sum: f690cbf54092227ef87508af9795ffc7
+MD5sum: cb0492daec84931316275997d3b9b711
 
 Package: data.tree
 Version: 0.4.0
@@ -309,13 +309,13 @@ Archs: jsonlite.so.dSYM
 MD5sum: 40c0a2e8b438f47b33d979cbe6df061c
 
 Package: knitr
-Version: 1.13
+Version: 1.14
 Depends: R (> 3.0.2)
 Imports: evaluate (>= 0.8), digest, formatR, highr, markdown, stringr (>= 0.6), yaml (>= 2.1.5), methods, tools
 Suggests: testit, rgl (>= 0.95.1201), codetools, rmarkdown, htmlwidgets, webshot, tikzDevice (>= 0.10), png, jpeg,
-            XML, RCurl
+            XML, RCurl, DBI (>= 0.4-1), tibble
 License: GPL
-MD5sum: 7594942113341e69efe69888b4f5ece4
+MD5sum: ea311b61c510a0da3b47a56ad17ade4c
 
 Package: labeling
 Version: 0.3
@@ -407,14 +407,14 @@ License: GPL (>= 2)
 MD5sum: 4146c91ff6894638dca0aaf6012b24eb
 
 Package: mgcv
-Version: 1.8-13
+Version: 1.8-14
 Priority: recommended
 Depends: R (>= 2.14.0), nlme (>= 3.1-64)
 Imports: methods, stats, graphics, Matrix
 Suggests: splines, parallel, survival, MASS
 License: GPL (>= 2)
 Archs: mgcv.so.dSYM
-MD5sum: 0b6afed8dc7e81bf1a24f56a1da2e45c
+MD5sum: 9939c63f17d915a26d947a86e410e6b1
 
 Package: mime
 Version: 0.5
@@ -487,8 +487,8 @@ MD5sum: a7d352794bd0371d0b79dbcb50241f38
 Package: NMF
 Version: 0.20.6
 Depends: R (>= 3.0.0), methods, utils, pkgmaker (>= 0.20), registry, rngtools (>= 1.2.3), cluster
-Imports: graphics, stats, stringr (>= 1.0.0), digest, grid, grDevices, gridBase, colorspace, RColorBrewer,
-            foreach, doParallel, ggplot2, reshape2
+Imports: graphics, stats, stringr (>= 1.0.0), digest, grid, grDevices, gridBase, colorspace, RColorBrewer, foreach,
+            doParallel, ggplot2, reshape2
 Suggests: RcppOctave (>= 0.11), fastICA, doMPI, bigmemory (>= 4.2), synchronicity, corpcor, xtable, devtools,
             knitr, bibtex, RUnit, mail, Biobase
 License: GPL (>= 2)
@@ -564,11 +564,11 @@ Archs: quantreg.so.dSYM
 MD5sum: 6e6935adf69dbdc0e496b83157ef4e74
 
 Package: R6
-Version: 2.1.2
+Version: 2.1.3
 Depends: R (>= 3.0)
 Suggests: knitr, microbenchmark, pryr, testthat, ggplot2, scales
 License: MIT + file LICENSE
-MD5sum: 6dfa2cf54a18e7662d84fa06317930e7
+MD5sum: 60776434ddba6aa7a6412a88a86e9ae6
 
 Package: radiant
 Version: 0.5.10
@@ -643,14 +643,14 @@ Archs: Rcpp.so.dSYM
 MD5sum: 3bd631e60f9dd4bb244f66eba17ec048
 
 Package: RcppEigen
-Version: 0.3.2.8.1
+Version: 0.3.2.9.0
 Depends: R (>= 2.15.1)
 Imports: Matrix (>= 1.1-0), Rcpp (>= 0.11.0), stats, utils
 LinkingTo: Rcpp
 Suggests: inline, RUnit, pkgKitten
 License: GPL (>= 2) | file LICENSE
 Archs: RcppEigen.so.dSYM
-MD5sum: 729b7c6538decee3be53ac318bbd26c4
+MD5sum: f550f1fb1616548fb132cb8be2536936
 
 Package: readr
 Version: 1.0.0
@@ -746,13 +746,13 @@ License: MIT + file LICENSE
 MD5sum: 0087d6518b698eb0743f2bfe63d90368
 
 Package: slam
-Version: 0.1-35
+Version: 0.1-37
 Depends: R (>= 2.8.0)
 Imports: stats
 Enhances: Matrix, SparseM, spam
 License: GPL-2
 Archs: slam.so.dSYM
-MD5sum: 73efbf97d21bd089ca15b8ed74f57720
+MD5sum: 42e7e0a1374545f4e1f1e1a3b6ce27bb
 
 Package: sourcetools
 Version: 0.1.2
@@ -779,12 +779,12 @@ License_is_FOSS: yes
 MD5sum: c453775e20991da4d5690d70ccd6f314
 
 Package: stringr
-Version: 1.0.0
+Version: 1.1.0
 Depends: R (>= 2.14)
 Imports: stringi (>= 0.4.1), magrittr
-Suggests: testthat, knitr
+Suggests: testthat, knitr, htmltools, htmlwidgets, rmarkdown, covr
 License: GPL-2
-MD5sum: 4c5366b2690343699028f71b1fc8ba03
+MD5sum: 7329dba933d23100cb5e94f5a3adfe1b
 
 Package: tibble
 Version: 1.1
