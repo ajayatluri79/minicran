@@ -49,7 +49,8 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 			installr::install.URL(URL, installer_option = "/S")
 
 			wz <- suppressWarnings(system("where R", intern = TRUE))
-			if (!grepl("zip", wz)) {
+			w7z <- suppressWarnings(system("where 7z", intern = TRUE))
+			if (!grepl("zip", wz) && !grepl("7-Zip", w7z)) {
 				# installr::install.7zip()
 				URL <- "https://radiant-rstats.github.io/minicran/7z1602.exe"
 				installr::install.URL(URL)
