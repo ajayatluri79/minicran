@@ -34,8 +34,8 @@ NeedsCompilation: yes
 Package: broom
 Version: 0.4.1
 Imports: plyr, dplyr, tidyr, psych, stringr, reshape2, nlme, methods
-Suggests: knitr, boot, survival, gam, glmnet, lfe, Lahman, MASS, sp, maps, maptools, multcomp, testthat, lme4, zoo,
-            lmtest, plm, biglm, ggplot2, nnet, geepack, AUC, ergm, network, statnet.common, xergm, btergm,
+Suggests: knitr, boot, survival, gam, glmnet, lfe, Lahman, MASS, sp, maps, maptools, multcomp, testthat, lme4,
+            zoo, lmtest, plm, biglm, ggplot2, nnet, geepack, AUC, ergm, network, statnet.common, xergm, btergm,
             binGroup, Hmisc, bbmle, gamlss, rstan, rstanarm, coda, gmm, Matrix, ks, purrr, orcutt, mgcv, lmodel2,
             poLCA, mclust, covr
 License: MIT + file LICENSE
@@ -46,8 +46,8 @@ Package: car
 Version: 2.1-3
 Depends: R (>= 3.2.0)
 Imports: MASS, mgcv, nnet, pbkrtest (>= 0.4-4), quantreg, grDevices, utils, stats, graphics
-Suggests: alr4, boot, coxme, leaps, lme4, lmtest, Matrix, MatrixModels, nlme, rgl (>= 0.93.960), sandwich, SparseM,
-            survival, survey
+Suggests: alr4, boot, coxme, leaps, lme4, lmtest, Matrix, MatrixModels, nlme, rgl (>= 0.93.960), sandwich,
+            SparseM, survival, survey
 License: GPL (>= 2)
 MD5sum: 3eb8bbc8c81465f9729bc55abeaf4c29
 NeedsCompilation: no
@@ -519,8 +519,8 @@ NeedsCompilation: yes
 Package: NMF
 Version: 0.20.6
 Depends: R (>= 3.0.0), methods, utils, pkgmaker (>= 0.20), registry, rngtools (>= 1.2.3), cluster
-Imports: graphics, stats, stringr (>= 1.0.0), digest, grid, grDevices, gridBase, colorspace, RColorBrewer, foreach,
-            doParallel, ggplot2, reshape2
+Imports: graphics, stats, stringr (>= 1.0.0), digest, grid, grDevices, gridBase, colorspace, RColorBrewer,
+            foreach, doParallel, ggplot2, reshape2
 Suggests: RcppOctave (>= 0.11), fastICA, doMPI, bigmemory (>= 4.2), synchronicity, corpcor, xtable, devtools,
             knitr, bibtex, RUnit, mail, Biobase
 License: GPL (>= 2)
@@ -613,7 +613,7 @@ Depends: R (>= 3.3.0), radiant.data (>= 0.5.13), radiant.design (>= 0.5.7), radi
             radiant.model (>= 0.5.9), radiant.multivariate (>= 0.5.8)
 Imports: psych (>= 1.5.8), AlgDesign (>= 1.1.7.3), shiny (>= 0.13.2.9003), import (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: dc87d4fc0a5d32f5662844731479bd85
+MD5sum: b4ddd5ca0d68c5d2c8a34ee34f94ce80
 NeedsCompilation: no
 
 Package: radiant.basics
@@ -623,7 +623,7 @@ Imports: ggplot2 (>= 2.0.0), gridExtra (>= 2.0.0), scales (>= 0.4.0), dplyr (>= 
             (>= 1.5), shiny (>= 0.13.2.9003), psych (>= 1.5.8), import (>= 1.1.0), methods
 Suggests: testthat (>= 1.0.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 630ea1c870c7f928dd2d0a7321ebdfd0
+MD5sum: d4bf98eecd41bbe89619602d02b11305
 NeedsCompilation: no
 
 Package: radiant.data
@@ -636,7 +636,7 @@ Imports: tibble (>= 1.1), broom (>= 0.4.0), car (>= 2.1.1), gridExtra (>= 2.0.0)
             rstudioapi (>= 0.5), import (>= 1.0.0), base64enc, methods
 Suggests: testthat (>= 1.0.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 8a3f0c8e52b6aeeb6ed648a2df0c7072
+MD5sum: 2c0e9acad01354524f7d91ee3bce4b32
 NeedsCompilation: no
 
 Package: radiant.design
@@ -644,7 +644,7 @@ Version: 0.5.7
 Depends: R (>= 3.3.0), radiant.data (>= 0.5.13), mvtnorm
 Imports: dplyr (>= 0.5), shiny (>= 0.13.2.9003), AlgDesign (>= 1.1.7.3), import (>= 1.1.0), polycor, methods
 License: AGPL-3 | file LICENSE
-MD5sum: e72a587bff10169f0378fd7f4d2bb7da
+MD5sum: 2ca5078047f49c38a5f6138ef83e6634
 NeedsCompilation: no
 
 Package: radiant.model
@@ -656,7 +656,7 @@ Imports: radiant.basics (>= 0.5.9), shiny (>= 0.13.2.9003), nnet (>= 7.3.11), Ne
             magrittr (>= 1.5), DiagrammeR(>= 0.8.4), import (>= 1.1.0), methods
 Suggests: testthat (>= 1.0.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
-MD5sum: c23697bd859db26d14529d3976071d15
+MD5sum: 2e2dd38e8157e561c93dba4ace9d0e1b
 NeedsCompilation: no
 
 Package: radiant.multivariate
@@ -667,7 +667,7 @@ Imports: shiny (>= 0.13.2.9003), dplyr (>= 0.5), ggplot2 (>= 2.0.0), gridExtra (
             1.1.0), methods
 Suggests: testthat (>= 1.0.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
-MD5sum: baf92d28d925036101f1f308dc17b73e
+MD5sum: 1c69e4cd61e21f6c3a38e6370fb2fdfb
 NeedsCompilation: no
 
 Package: RColorBrewer
