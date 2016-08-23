@@ -618,7 +618,7 @@ Imports: tibble (>= 1.1), broom (>= 0.4.0), car (>= 2.1.1), gridExtra (>= 2.0.0)
                          psych (>= 1.5.8), DT (>= 0.2), readr (>= 1.0.0), scales (>= 0.4.0), curl (>= 1.1.0), rstudioapi (>= 0.5), import (>= 1.0.0), base64enc, methods
 Suggests: testthat (>= 1.0.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 639786fc91e88072cd4df4c1a4647fbd
+MD5sum: 8cf38f520e843e423d312da337ed75e7
 NeedsCompilation: no
 
 Package: radiant.design
