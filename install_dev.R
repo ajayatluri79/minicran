@@ -5,7 +5,7 @@ repos <- c("https://radiant-rstats.github.io/minicran/", "https://cran.rstudio.c
 options(repos = c(CRAN = repos))
 
 build <- function() {
-	update.packages(lib.loc = .libPath()[1], ask = FALSE, repos = "https://radiant-rstats.github.io/minicran/", type = "binary")
+	update.packages(lib.loc = .libPaths()[1], ask = FALSE, repos = "https://radiant-rstats.github.io/minicran/", type = "binary")
 	install <- function(x) {
 		if (!x %in% installed.packages()) install.packages(x, type = 'binary')
 	}
