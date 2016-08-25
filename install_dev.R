@@ -14,8 +14,8 @@ build <- function() {
 		c("radiant", "devtools", "roxygen2", "testthat", "gitgadget", "lintr", "haven", "readxl", "miniUI"), install
 	)
 
-  pkgs <- new.packages(lib.loc = .libPaths()[1], repos = 'https://radiant-rstats.github.io/minicran', type = 'binary', ask = FALSE)
-  if (length(pkgs) > 0) install.packages(pkgs, repos = 'https://radiant-rstats.github.io/minicran', type = 'binary')
+	pkgs <- new.packages(lib.loc = .libPaths()[1], repos = 'https://radiant-rstats.github.io/minicran', type = 'binary', ask = FALSE)
+	if (length(pkgs) > 0) install.packages(pkgs, repos = 'https://radiant-rstats.github.io/minicran', type = 'binary')
 }
 
 readliner <- function(text, inp = "", resp = "[yYnN]") {
