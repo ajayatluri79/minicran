@@ -13,6 +13,7 @@ build <- function() {
 
 	## needed for windoze
 	pkgs <- new.packages(lib.loc = .libPaths()[1], repos = 'https://radiant-rstats.github.io/minicran', type = 'binary', ask = FALSE)
+	pkgs <- pkgs[!grepl("gitgadget",pkgs)]
 	if (length(pkgs) > 0) install.packages(pkgs, repos = 'https://radiant-rstats.github.io/minicran', type = 'binary')
 
 	# see https://github.com/wch/webshot/issues/25#event-740360519
