@@ -210,7 +210,7 @@ Depends: R (>= 3.3.0)
 Imports: shiny (>= 0.13.2), miniUI (>= 0.1.1), rstudioapi (>= 0.6), curl (>= 0.9), jsonlite (>= 1.0), dplyr (>= 0.5),
              methods
 License: GPL-3
-MD5sum: 9603debbfde1e918e54d3faa9b48f2bc
+MD5sum: 36845ae40c7c969ae96f04ffb18178bf
 NeedsCompilation: no
 
 Package: gridBase
