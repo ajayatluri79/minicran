@@ -32,14 +32,13 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 	os <- Sys.info()["sysname"]
 	if (os == "Windows") {
 		lp <- .libPaths()[grepl("Documents",.libPaths())]
-		if (grepl("(Prog)|(PROG)", Sys.getenv("R_HOME"))) {
-			rv <- paste(rv$major, rv$minor, sep = ".")
-			cat(paste0("It seems you installed R in the Program Files directory.\nPlease uninstall R and re-install into C:\\R\\R-",rv),"\n\n")
-		} else if (length(lp) > 0) {
-
-			cat("Installing R-packages in the directory printed below often causes\nproblems on Windows. Please remove the 'Documents/R' directory,\nclose and restart R, and run the script again.\n\n")
-			cat(paste0(lp, collapse = "\n"),"\n\n")
-		} else {
+		# if (grepl("(Prog)|(PROG)", Sys.getenv("R_HOME"))) {
+		# 	rv <- paste(rv$major, rv$minor, sep = ".")
+		# 	cat(paste0("It seems you installed R in the Program Files directory.\nPlease uninstall R and re-install into C:\\R\\R-",rv),"\n\n")
+		# } else if (length(lp) > 0) {
+		# 	cat("Installing R-packages in the directory printed below often causes\nproblems on Windows. Please remove the 'Documents/R' directory,\nclose and restart R, and run the script again.\n\n")
+		# 	cat(paste0(lp, collapse = "\n"),"\n\n")
+		# } else {
 
 			build()
 
@@ -65,7 +64,7 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 			installr::install.URL(URL)
 
 			cat("\n\nInstallation on Windows complete. Close R and start Rstudio\n\n")
-		}
+		# }
 	} else if (os == "Darwin") {
 
 		## from http://unix.stackexchange.com/a/712
