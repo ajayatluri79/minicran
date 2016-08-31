@@ -172,7 +172,7 @@ Enhances: sp
 License: GPL-2
 
 Package: gitgadget
-Version: 0.27
+Version: 0.28
 Depends: R (>= 3.3.0)
 Imports: shiny (>= 0.13.2), miniUI (>= 0.1.1), rstudioapi (>= 0.6), curl (>= 0.9),
          jsonlite (>= 1.0), dplyr (>= 0.5), methods
