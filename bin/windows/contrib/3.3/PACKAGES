@@ -511,8 +511,8 @@ Suggests: testthat (>= 1.0.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
 
 Package: radiant.design
-Version: 0.5.7
-Depends: R (>= 3.3.0), radiant.data (>= 0.5.13), mvtnorm
+Version: 0.5.8
+Depends: R (>= 3.3.0), radiant.data (>= 0.5.20), mvtnorm
 Imports: dplyr (>= 0.5), shiny (>= 0.13.2.9003), AlgDesign (>= 1.1.7.3), import (>= 1.1.0), polycor, methods
 License: AGPL-3 | file LICENSE
 
