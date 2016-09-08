@@ -612,13 +612,13 @@ License: Apache License 2.0
 MD5sum: 15c2b4b421a9aaf82f332d229a044636
 
 Package: Rcpp
-Version: 0.12.6
+Version: 0.12.7
 Depends: R (>= 3.0.0)
 Imports: methods, utils
 Suggests: RUnit, inline, rbenchmark, highlight, pkgKitten (>= 0.1.2)
 License: GPL (>= 2)
 Archs: Rcpp.so.dSYM
-MD5sum: 3bd631e60f9dd4bb244f66eba17ec048
+MD5sum: c89ffaf3b37d632add810d12b1f11af7
 
 Package: RcppEigen
 Version: 0.3.2.9.0
