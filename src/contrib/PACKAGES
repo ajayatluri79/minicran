@@ -34,9 +34,10 @@ NeedsCompilation: yes
 Package: broom
 Version: 0.4.1
 Imports: plyr, dplyr, tidyr, psych, stringr, reshape2, nlme, methods
-Suggests: knitr, boot, survival, gam, glmnet, lfe, Lahman, MASS, sp, maps, maptools, multcomp, testthat, lme4, zoo, lmtest,
-             plm, biglm, ggplot2, nnet, geepack, AUC, ergm, network, statnet.common, xergm, btergm, binGroup, Hmisc,
-             bbmle, gamlss, rstan, rstanarm, coda, gmm, Matrix, ks, purrr, orcutt, mgcv, lmodel2, poLCA, mclust, covr
+Suggests: knitr, boot, survival, gam, glmnet, lfe, Lahman, MASS, sp, maps, maptools, multcomp, testthat, lme4, zoo,
+             lmtest, plm, biglm, ggplot2, nnet, geepack, AUC, ergm, network, statnet.common, xergm, btergm, binGroup,
+             Hmisc, bbmle, gamlss, rstan, rstanarm, coda, gmm, Matrix, ks, purrr, orcutt, mgcv, lmodel2, poLCA, mclust,
+             covr
 License: MIT + file LICENSE
 MD5sum: b398199feced55486a15be4acc111d0a
 NeedsCompilation: no
@@ -99,8 +100,8 @@ Package: data.tree
 Version: 0.4.0
 Depends: R (>= 3.0)
 Imports: R6, stringr, methods, DiagrammeR
-Suggests: Formula, graphics, testthat, knitr, ape, yaml, networkD3, jsonlite, igraph, treemap, doParallel, party, partykit,
-             foreach
+Suggests: Formula, graphics, testthat, knitr, ape, yaml, networkD3, jsonlite, igraph, treemap, doParallel, party,
+             partykit, foreach
 License: GPL (>= 2)
 MD5sum: e1b50c6f1541e84dab7c362094ba175b
 NeedsCompilation: no
@@ -196,8 +197,8 @@ Package: ggplot2
 Version: 2.1.0
 Depends: R (>= 3.1)
 Imports: digest, grid, gtable (>= 0.1.1), MASS, plyr (>= 1.7.1), reshape2, scales (>= 0.3.0), stats
-Suggests: covr, ggplot2movies, hexbin, Hmisc, lattice, mapproj, maps, maptools, mgcv, multcomp, nlme, testthat (>= 0.11.0),
-             quantreg, knitr, rpart, rmarkdown, svglite
+Suggests: covr, ggplot2movies, hexbin, Hmisc, lattice, mapproj, maps, maptools, mgcv, multcomp, nlme, testthat (>=
+             0.11.0), quantreg, knitr, rpart, rmarkdown, svglite
 Enhances: sp
 License: GPL-2
 MD5sum: 771928cfb97c649c720423deb3ec7fd3
@@ -606,12 +607,12 @@ MD5sum: 6e1e2c8909aa08402a48dfd95c4dc92b
 NeedsCompilation: no
 
 Package: radiant
-Version: 0.5.15
-Depends: R (>= 3.3.0), radiant.data (>= 0.5.26), radiant.design (>= 0.5.9), radiant.basics (>= 0.5.10), radiant.model (>=
+Version: 0.5.16
+Depends: R (>= 3.3.0), radiant.data (>= 0.6.0), radiant.design (>= 0.5.9), radiant.basics (>= 0.5.10), radiant.model (>=
              0.5.13), radiant.multivariate (>= 0.5.8)
-Imports: psych (>= 1.5.8), AlgDesign (>= 1.1.7.3), shiny (>= 0.13.2.9003), import (>= 1.1.0)
+Imports: psych (>= 1.5.8), AlgDesign (>= 1.1.7.3), shiny (>= 0.14), import (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 7d277afc5e1984e8ff4eb3555eff85b1
+MD5sum: 39d77897359b76c118467fdd39e49b80
 NeedsCompilation: no
 
 Package: radiant.basics
@@ -621,7 +622,7 @@ Imports: ggplot2 (>= 2.0.0), gridExtra (>= 2.0.0), scales (>= 0.4.0), dplyr (>= 
              shiny (>= 0.13.2.9003), psych (>= 1.5.8), import (>= 1.1.0), methods
 Suggests: testthat (>= 1.0.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 718b32ae5460919bc07fbf3bf2c7f847
+MD5sum: 57bd52ecb49fd01502c498edbb657629
 NeedsCompilation: no
 
 Package: radiant.data
@@ -633,7 +634,7 @@ Imports: tibble (>= 1.2), broom (>= 0.4.1), car (>= 2.1.3), gridExtra (>= 2.0.0)
              1.1.0), base64enc, methods
 Suggests: testthat (>= 1.0.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
-MD5sum: a3ed910d17205d69b8f61e5b7091b09d
+MD5sum: 5f3e9fb3559903bcd80e42a8032a1c0b
 NeedsCompilation: no
 
 Package: radiant.design
@@ -641,7 +642,7 @@ Version: 0.5.9
 Depends: R (>= 3.3.0), radiant.data (>= 0.5.20), mvtnorm
 Imports: dplyr (>= 0.5), shiny (>= 0.13.2.9003), AlgDesign (>= 1.1.7.3), import (>= 1.1.0), polycor, methods
 License: AGPL-3 | file LICENSE
-MD5sum: a60c4ee647e3b93feb3df396ed0b43f2
+MD5sum: 3f7aa06ca5e1b4aee4c932075bea60c4
 NeedsCompilation: no
 
 Package: radiant.model
@@ -649,11 +650,11 @@ Version: 0.5.13
 Depends: R (>= 3.3.0), radiant.data (>= 0.5.22)
 Imports: radiant.basics (>= 0.5.9), shiny (>= 0.13.2.9003), nnet (>= 7.3.11), NeuralNetTools (>= 1.4.0), sandwich (>=
              2.3.4), car (>= 2.1.1), ggplot2 (>= 2.0.0), gridExtra (>= 2.0.0), data.tree (>= 0.1.9), yaml (>= 2.1.13),
-             stringr (>= 1.0), pryr (>= 0.1.2), lubridate (>= 1.5.0), tidyr (>= 0.4.1), dplyr (>= 0.5), magrittr (>= 1.5),
-             DiagrammeR(>= 0.8.4), import (>= 1.1.0), methods
+             stringr (>= 1.0), pryr (>= 0.1.2), lubridate (>= 1.5.0), tidyr (>= 0.4.1), dplyr (>= 0.5), magrittr (>=
+             1.5), DiagrammeR(>= 0.8.4), import (>= 1.1.0), methods
 Suggests: testthat (>= 1.0.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 4e71411847f30b7d5bb6c035f960071e
+MD5sum: dd207de4dc6589d52be645eb86726870
 NeedsCompilation: no
 
 Package: radiant.multivariate
@@ -663,7 +664,7 @@ Imports: shiny (>= 0.13.2.9003), dplyr (>= 0.5), ggplot2 (>= 2.0.0), gridExtra (
              1.5), psych (>= 1.5.8), car (>= 2.1.1), MASS (>= 7.3), wordcloud (>= 2.5), import (>= 1.1.0), methods
 Suggests: testthat (>= 1.0.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 0b782a70ce99213352ae23122e3f26fa
+MD5sum: e7fe1cad672df5ca4f76c0bd16e0083b
 NeedsCompilation: no
 
 Package: RColorBrewer
