@@ -177,6 +177,15 @@ License: MIT + file LICENSE
 MD5sum: 877d89ce8a9ef7f403b1089ca1021775
 NeedsCompilation: no
 
+Package: feather
+Version: 0.3.0
+Imports: Rcpp, tibble, hms
+LinkingTo: Rcpp
+Suggests: testthat, dplyr
+License: Apache License 2.0
+MD5sum: a5c31c6db0e7d2e501b0987258c384b6
+NeedsCompilation: yes
+
 Package: foreach
 Version: 1.4.3
 Depends: R (>= 2.5.0)

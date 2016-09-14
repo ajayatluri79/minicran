@@ -144,6 +144,14 @@ Imports: methods, stringr (>= 0.6.2)
 Suggests: testthat, lattice, ggplot2
 License: MIT + file LICENSE
 
+Package: feather
+Version: 0.3.0
+Imports: Rcpp, tibble, hms
+LinkingTo: Rcpp
+Suggests: testthat, dplyr
+License: Apache License 2.0
+Archs: i386, x64
+
 Package: foreach
 Version: 1.4.3
 Depends: R (>= 2.5.0)

@@ -165,6 +165,15 @@ Suggests: testthat, lattice, ggplot2
 License: MIT + file LICENSE
 MD5sum: 558a10e1b0344e06720851600d20689d
 
+Package: feather
+Version: 0.3.0
+Imports: Rcpp, tibble, hms
+LinkingTo: Rcpp
+Suggests: testthat, dplyr
+License: Apache License 2.0
+Archs: feather.so.dSYM
+MD5sum: c6d3a331d1084671ce4aec9c602952bc
+
 Package: foreach
 Version: 1.4.3
 Depends: R (>= 2.5.0)
