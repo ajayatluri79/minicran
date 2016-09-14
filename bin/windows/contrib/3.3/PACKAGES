@@ -488,7 +488,7 @@ Suggests: knitr, microbenchmark, pryr, testthat, ggplot2, scales
 License: MIT + file LICENSE
 
 Package: radiant
-Version: 0.5.16
+Version: 0.5.17
 Depends: R (>= 3.3.0), radiant.data (>= 0.6.0), radiant.design (>= 0.5.9), radiant.basics (>= 0.5.10), radiant.model (>= 0.5.13), radiant.multivariate (>= 0.5.8)
 Imports: psych (>= 1.5.8), AlgDesign (>= 1.1.7.3), shiny (>= 0.14), import (>= 1.1.0)
 License: AGPL-3 | file LICENSE
@@ -511,9 +511,10 @@ Suggests: testthat (>= 1.0.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
 
 Package: radiant.design
-Version: 0.5.9
-Depends: R (>= 3.3.0), radiant.data (>= 0.5.20), mvtnorm
-Imports: dplyr (>= 0.5), shiny (>= 0.13.2.9003), AlgDesign (>= 1.1.7.3), import (>= 1.1.0), polycor, methods
+Version: 0.6.0
+Depends: R (>= 3.3.0), radiant.data (>= 0.6), mvtnorm
+Imports: dplyr (>= 0.5), shiny (>= 0.14), AlgDesign (>= 1.1.7.3), import (>= 1.1.0), polycor, methods
+Suggests: testthat (>= 1.0.0),
 License: AGPL-3 | file LICENSE
 
 Package: radiant.model

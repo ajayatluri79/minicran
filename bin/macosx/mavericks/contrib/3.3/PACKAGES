@@ -558,11 +558,11 @@ License: MIT + file LICENSE
 MD5sum: 60776434ddba6aa7a6412a88a86e9ae6
 
 Package: radiant
-Version: 0.5.16
+Version: 0.5.17
 Depends: R (>= 3.3.0), radiant.data (>= 0.6.0), radiant.design (>= 0.5.9), radiant.basics (>= 0.5.10), radiant.model (>= 0.5.13), radiant.multivariate (>= 0.5.8)
 Imports: psych (>= 1.5.8), AlgDesign (>= 1.1.7.3), shiny (>= 0.14), import (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: d5b6bcb0263544bf96bdbd2e45107cfa
+MD5sum: e6051208d78483cbdc6a7e7898d546b3
 
 Package: radiant.basics
 Version: 0.5.10
@@ -571,7 +571,7 @@ Imports: ggplot2 (>= 2.0.0), gridExtra (>= 2.0.0), scales (>= 0.4.0), dplyr (>= 
                     1.1.0), methods
 Suggests: testthat (>= 1.0.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
-MD5sum: b3897e68578040476af19e26ee5cfeb1
+MD5sum: 82a7911db453acaf3dd4000691e98a34
 
 Package: radiant.data
 Version: 0.6.1
@@ -581,14 +581,15 @@ Imports: tibble (>= 1.2), broom (>= 0.4.1), car (>= 2.1.3), gridExtra (>= 2.0.0)
                     1.1.0), base64enc, methods
 Suggests: testthat (>= 1.0.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
-MD5sum: ca3c69992763e30cb1002cae699035a7
+MD5sum: e296156ec7a310057d867b4fbfefc8dc
 
 Package: radiant.design
-Version: 0.5.9
-Depends: R (>= 3.3.0), radiant.data (>= 0.5.20), mvtnorm
-Imports: dplyr (>= 0.5), shiny (>= 0.13.2.9003), AlgDesign (>= 1.1.7.3), import (>= 1.1.0), polycor, methods
+Version: 0.6.0
+Depends: R (>= 3.3.0), radiant.data (>= 0.6), mvtnorm
+Imports: dplyr (>= 0.5), shiny (>= 0.14), AlgDesign (>= 1.1.7.3), import (>= 1.1.0), polycor, methods
+Suggests: testthat (>= 1.0.0),
 License: AGPL-3 | file LICENSE
-MD5sum: 70f128895276a788e2a84fdad698f888
+MD5sum: 202189e426906ed31683e6a1dd6187f0
 
 Package: radiant.model
 Version: 0.5.13
@@ -598,7 +599,7 @@ Imports: radiant.basics (>= 0.5.9), shiny (>= 0.13.2.9003), nnet (>= 7.3.11), Ne
                     DiagrammeR(>= 0.8.4), import (>= 1.1.0), methods
 Suggests: testthat (>= 1.0.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 4d38d9ed1f40c16df43c0136489f89e9
+MD5sum: 83367a0d65f2306d8a9215f8cd3d8996
 
 Package: radiant.multivariate
 Version: 0.5.8
@@ -607,7 +608,7 @@ Imports: shiny (>= 0.13.2.9003), dplyr (>= 0.5), ggplot2 (>= 2.0.0), gridExtra (
                     wordcloud (>= 2.5), import (>= 1.1.0), methods
 Suggests: testthat (>= 1.0.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 1c54335eb640bc404fe8e1164d578873
+MD5sum: 4e9c404f2fb8c969de7fe7f537cb7afa
 
 Package: RColorBrewer
 Version: 1.1-2
