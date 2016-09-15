@@ -1,20 +1,20 @@
-## install script for R(adiant) @ Rady School of Management (MBA)
+## install script for R(adiant) @ Rady School of Management (MBA and MSBA)
 cdir <- getwd()
 repos <- c("https://radiant-rstats.github.io/minicran/", "https://cran.rstudio.com")
 options(repos = c(CRAN = repos))
 
-build <- function() {
-	update.packages(lib.loc = .libPaths()[1], ask = FALSE, repos = "https://radiant-rstats.github.io/minicran/", type = "binary")
+build <- function(type = "binary") {
+	update.packages(lib.loc = .libPaths()[1], ask = FALSE, repos = "https://radiant-rstats.github.io/minicran/", type = type)
 	install <- function(x) {
-		if (!x %in% installed.packages()) install.packages(x, type = 'binary')
+		if (!x %in% installed.packages()) install.packages(x, type = type)
 	}
 
 	resp <- sapply(c("radiant", "haven", "readxl", "miniUI", "webshot"), install)
 
 	## needed for windoze
-	pkgs <- new.packages(lib.loc = .libPaths()[1], repos = 'https://radiant-rstats.github.io/minicran', type = 'binary', ask = FALSE)
+	pkgs <- new.packages(lib.loc = .libPaths()[1], repos = 'https://radiant-rstats.github.io/minicran', type = type, ask = FALSE)
 	pkgs <- pkgs[!grepl("gitgadget",pkgs)]
-	if (length(pkgs) > 0) install.packages(pkgs, repos = 'https://radiant-rstats.github.io/minicran', type = 'binary')
+	if (length(pkgs) > 0) install.packages(pkgs, repos = 'https://radiant-rstats.github.io/minicran', type = type)
 
 	# see https://github.com/wch/webshot/issues/25#event-740360519
 	if (is.null(webshot:::find_phantom())) webshot::install_phantomjs()
@@ -48,7 +48,7 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 			build()
     }
   } else {
-		cat("\n\nThe install script is not currently supported on your OS")
+    build(type = "source")
 	}
 }
 
