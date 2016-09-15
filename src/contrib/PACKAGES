@@ -217,12 +217,12 @@ MD5sum: 771928cfb97c649c720423deb3ec7fd3
 NeedsCompilation: no
 
 Package: gitgadget
-Version: 0.2.0
+Version: 0.2.1
 Depends: R (>= 3.3.0)
 Imports: shiny (>= 0.14), miniUI (>= 0.1.1), rstudioapi (>= 0.6), curl (>= 0.9), jsonlite
           (>= 1.0), dplyr (>= 0.5), methods
 License: GPL-3
-MD5sum: ff4acad60e489d2552b217ecaf428d71
+MD5sum: 108b6578e7f01c168eb46b19ebcd80ac
 NeedsCompilation: no
 
 Package: gridBase

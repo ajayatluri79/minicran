@@ -202,12 +202,12 @@ License: GPL-2
 MD5sum: c540d79df6ac64a30f39257931ba4d80
 
 Package: gitgadget
-Version: 0.2.0
+Version: 0.2.1
 Depends: R (>= 3.3.0)
 Imports: shiny (>= 0.14), miniUI (>= 0.1.1), rstudioapi (>= 0.6), curl (>= 0.9), jsonlite
           (>= 1.0), dplyr (>= 0.5), methods
 License: GPL-3
-MD5sum: a6c86e0e211fe0ef61955303d86eb39e
+MD5sum: 684e5420bf0efa4cf1411ccaf7cbecee
 
 Package: gridBase
 Version: 0.4-7
