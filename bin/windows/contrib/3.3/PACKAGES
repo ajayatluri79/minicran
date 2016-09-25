@@ -89,6 +89,12 @@ Depends: R (>= 2.15.0), methods
 Suggests: testthat, RSQLite, knitr, rmarkdown, covr
 License: LGPL (>= 2)
 
+Package: DEoptimR
+Version: 1.0-6
+Imports: stats
+Enhances: robustbase
+License: GPL (>= 2)
+
 Package: DiagrammeR
 Version: 0.8.4
 Imports: htmlwidgets (>= 0.6), igraph (>= 1.0.0), influenceR (>= 0.1.0), rstudioapi (>= 0.6), stringr (>= 1.0.0), visNetwork (>= 1.0.0), scales (>= 0.4.0)
@@ -178,6 +184,14 @@ Version: 0.2.1
 Depends: R (>= 3.3.0)
 Imports: shiny (>= 0.14), miniUI (>= 0.1.1), rstudioapi (>= 0.6), curl (>= 0.9), jsonlite (>= 1.0), dplyr (>= 0.5), methods
 License: GPL-3
+
+Package: Gmedian
+Version: 1.2.3
+Depends: R (>= 3.0.0)
+Imports: Rcpp (>= 0.12.6), RSpectra, robustbase
+LinkingTo: Rcpp, RcppArmadillo, RSpectra
+License: GPL (>= 2)
+Archs: i386, x64
 
 Package: gridBase
 Version: 0.4-7
@@ -579,10 +593,10 @@ Suggests: testthat (>= 1.0.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
 
 Package: radiant.multivariate
-Version: 0.6.0
+Version: 0.6.0.9000
 Depends: R (>= 3.3.0), radiant.data (>= 0.6)
-Imports: shiny (>= 0.14), dplyr (>= 0.5), ggplot2 (>= 2.0.0), gridExtra (>= 2.0.0), scales (>= 0.4.0), magrittr (>= 1.5), psych (>= 1.5.8), car (>= 2.1.1), MASS (>= 7.3),
-                    wordcloud (>= 2.5), import (>= 1.1.0), methods
+Imports: shiny (>= 0.14), dplyr (>= 0.5), ggplot2 (>= 2.0.0), gridExtra (>= 2.0.0), scales (>= 0.4.0), magrittr (>= 1.5), psych (>= 1.6.6), car (>= 2.1.1), MASS (>= 7.3),
+                    wordcloud (>= 2.5), import (>= 1.1.0), Gmedian (>= 1.2.3), methods
 Suggests: testthat (>= 1.0.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
 
@@ -596,6 +610,14 @@ Version: 0.12.7
 Depends: R (>= 3.0.0)
 Imports: methods, utils
 Suggests: RUnit, inline, rbenchmark, highlight, pkgKitten (>= 0.1.2)
+License: GPL (>= 2)
+Archs: i386, x64
+
+Package: RcppArmadillo
+Version: 0.7.400.2.0
+Imports: Rcpp (>= 0.11.0), stats, utils
+LinkingTo: Rcpp
+Suggests: RUnit, Matrix, pkgKitten
 License: GPL (>= 2)
 Archs: i386, x64
 
@@ -652,6 +674,23 @@ Depends: R (>= 3.0.0), methods, pkgmaker (>= 0.20)
 Imports: stringr, digest
 Suggests: parallel, RUnit, knitr
 License: GPL-3
+
+Package: robustbase
+Version: 0.92-6
+Depends: R (>= 3.0.2)
+Imports: stats, graphics, utils, methods, DEoptimR
+Suggests: grid, MASS, lattice, boot, cluster, Matrix, robust, fit.models, MPV, xtable, ggplot2, GGally, RColorBrewer, reshape2, sfsmisc, catdata
+License: GPL (>= 2)
+Archs: i386, x64
+
+Package: RSpectra
+Version: 0.12-0
+Depends: R (>= 3.0.2)
+Imports: Matrix (>= 1.1-0), Rcpp (>= 0.11.5)
+LinkingTo: Rcpp, RcppEigen (>= 0.3.2.2.0)
+Suggests: knitr
+License: MPL (>= 2)
+Archs: i386, x64
 
 Package: rstudioapi
 Version: 0.6
