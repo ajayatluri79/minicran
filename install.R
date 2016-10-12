@@ -57,7 +57,7 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 			w7z <- suppressWarnings(system("where 7z", intern = TRUE))
 			if (!grepl("zip", wz) && !grepl("7-Zip", w7z)) {
 				# installr::install.7zip()
-				URL <- "https://radiant-rstats.github.io/minicran/bin/7z1602.exe"
+				URL <- "http://rady.ucsd.edu/faculty/directory/nijs/pub/docs/radiant/7z1602.exe"
 				installr::install.URL(URL)
 				if (file.exists(file.path(Sys.getenv("ProgramFiles"), "7-Zip"))) {
 					shell(paste0("setx PATH \"", paste0(Sys.getenv("ProgramFiles"), "\\7-Zip\"")))
@@ -101,7 +101,7 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 			cat("To generate PDF reports in Radiant you will need MacTex. This is a very large\ndownload (approx 2GB).\n")
 			inp <- readliner("Proceed with the install? Press y or n and then press return: ")
 			if (grepl("[yY]", inp)) {
-				download.file("http://tug.org/cgi-bin/mactex-download/MacTeX.pkg", "MacTex.pkg")
+				download.file("http://rady.ucsd.edu/faculty/directory/nijs/pub/docs/radiant/mactex-20161009.pkg", "MacTex.pkg")
 				system("open MacTex.pkg", wait = TRUE)
 			}
 			cat("\n\nInstallation on Mac complete. Close R, start Rstudio, and select Radiant\nfrom the Addins menu to get started\n\n")
