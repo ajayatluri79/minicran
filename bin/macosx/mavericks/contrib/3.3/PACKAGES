@@ -32,8 +32,8 @@ MD5sum: 5aa84aa9a661caacf22a55109ba56da3
 Package: broom
 Version: 0.4.1
 Imports: plyr, dplyr, tidyr, psych, stringr, reshape2, nlme, methods
-Suggests: knitr, boot, survival, gam, glmnet, lfe, Lahman, MASS, sp, maps, maptools, multcomp, testthat, lme4, zoo, lmtest, plm, biglm, ggplot2, nnet, geepack, AUC, ergm, network,
-                    statnet.common, xergm, btergm, binGroup, Hmisc, bbmle, gamlss, rstan, rstanarm, coda, gmm, Matrix, ks, purrr, orcutt, mgcv, lmodel2, poLCA, mclust, covr
+Suggests: knitr, boot, survival, gam, glmnet, lfe, Lahman, MASS, sp, maps, maptools, multcomp, testthat, lme4, zoo, lmtest, plm, biglm, ggplot2, nnet, geepack, AUC, ergm, network, statnet.common, xergm, btergm, binGroup,
+                         Hmisc, bbmle, gamlss, rstan, rstanarm, coda, gmm, Matrix, ks, purrr, orcutt, mgcv, lmodel2, poLCA, mclust, covr
 License: MIT + file LICENSE
 MD5sum: 671f2a54207e0ad4eed87ef26866a3fc
 
@@ -643,21 +643,19 @@ MD5sum: b5611237e609ea37b6672e8baa30ae70
 Package: radiant.basics
 Version: 0.6.1
 Depends: R (>= 3.3.0), radiant.data (>= 0.6.6)
-Imports: ggplot2 (>= 2.0.0), gridExtra (>= 2.0.0), scales (>= 0.4.0), dplyr (>= 0.5), tidyr (>= 0.4.1), magrittr (>= 1.5), shiny (>= 0.14), psych (>= 1.6.6), import (>= 1.1.0),
-                    methods
+Imports: ggplot2 (>= 2.0.0), gridExtra (>= 2.0.0), scales (>= 0.4.0), dplyr (>= 0.5), tidyr (>= 0.4.1), magrittr (>= 1.5), shiny (>= 0.14), psych (>= 1.6.6), import (>= 1.1.0), methods
 Suggests: testthat (>= 1.0.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
 MD5sum: 47087b2792e677fbb72d7975bb8c85f6
 
 Package: radiant.data
-Version: 0.6.7
+Version: 0.6.8
 Depends: R (>= 3.3.0), magrittr (>= 1.5), ggplot2 (>= 2.1.0), lubridate (>= 1.6.0), tidyr (>= 0.6), dplyr (>= 0.5)
-Imports: tibble (>= 1.2), broom (>= 0.4.1), car (>= 2.1.3), gridExtra (>= 2.0.0), knitr (>= 1.14), rmarkdown(>= 1.0), markdown (>= 0.7.7), pryr (>= 0.1.2), shiny (>= 0.14),
-                    jsonlite (>= 1.0), shinyAce (>= 0.2.1), psych (>= 1.6.6), DT (>= 0.2), readr (>= 1.0.0), scales (>= 0.4.0), curl (>= 1.1.0), rstudioapi (>= 0.6), import (>=
-                    1.1.0), feather (>= 0.3), base64enc, methods
+Imports: tibble (>= 1.2), broom (>= 0.4.1), car (>= 2.1.3), gridExtra (>= 2.0.0), knitr (>= 1.14), rmarkdown(>= 1.0), markdown (>= 0.7.7), pryr (>= 0.1.2), shiny (>= 0.14), jsonlite (>= 1.0), shinyAce (>= 0.2.1), psych (>=
+                         1.6.6), DT (>= 0.2), readr (>= 1.0.0), scales (>= 0.4.0), curl (>= 1.1.0), rstudioapi (>= 0.6), import (>= 1.1.0), feather (>= 0.3), base64enc, methods
 Suggests: testthat (>= 1.0.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 0584ec51fa7cd4366c1854a83fa7f4b6
+MD5sum: 01e80264ece6b635edeb04e7a2430e1a
 
 Package: radiant.design
 Version: 0.6.1
@@ -670,9 +668,8 @@ MD5sum: 7d68ec5dbca3bcda2bc4962b733317c8
 Package: radiant.model
 Version: 0.6.6
 Depends: R (>= 3.3.0), radiant.data (>= 0.6.6)
-Imports: radiant.basics (>= 0.6.0), shiny (>= 0.14), nnet (>= 7.3.12), NeuralNetTools (>= 1.4.0), sandwich (>= 2.3.4), car (>= 2.1.3), ggplot2 (>= 2.1.0), gridExtra (>= 2.0.0),
-                    data.tree (>= 0.4.0), yaml (>= 2.1.13), stringr (>= 1.1.0), pryr (>= 0.1.2), lubridate (>= 1.6.0), tidyr (>= 0.6.0), dplyr (>= 0.5), magrittr (>= 1.5),
-                    DiagrammeR(>= 0.8.4), import (>= 1.1.0), methods
+Imports: radiant.basics (>= 0.6.0), shiny (>= 0.14), nnet (>= 7.3.12), NeuralNetTools (>= 1.4.0), sandwich (>= 2.3.4), car (>= 2.1.3), ggplot2 (>= 2.1.0), gridExtra (>= 2.0.0), data.tree (>= 0.4.0), yaml (>= 2.1.13), stringr
+                         (>= 1.1.0), pryr (>= 0.1.2), lubridate (>= 1.6.0), tidyr (>= 0.6.0), dplyr (>= 0.5), magrittr (>= 1.5), DiagrammeR(>= 0.8.4), import (>= 1.1.0), methods
 Suggests: testthat (>= 1.0.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
 MD5sum: 0f4f82775d0c7f24374f687c6b5c5338
@@ -680,8 +677,8 @@ MD5sum: 0f4f82775d0c7f24374f687c6b5c5338
 Package: radiant.multivariate
 Version: 0.6.1
 Depends: R (>= 3.3.0), radiant.data (>= 0.6)
-Imports: shiny (>= 0.14), dplyr (>= 0.5), ggplot2 (>= 2.0.0), gridExtra (>= 2.0.0), scales (>= 0.4.0), magrittr (>= 1.5), psych (>= 1.6.6), car (>= 2.1.1), MASS (>= 7.3),
-                    wordcloud (>= 2.5), import (>= 1.1.0), Gmedian (>= 1.2.3), methods
+Imports: shiny (>= 0.14), dplyr (>= 0.5), ggplot2 (>= 2.0.0), gridExtra (>= 2.0.0), scales (>= 0.4.0), magrittr (>= 1.5), psych (>= 1.6.6), car (>= 2.1.1), MASS (>= 7.3), wordcloud (>= 2.5), import (>= 1.1.0), Gmedian (>=
+                         1.2.3), methods
 Suggests: testthat (>= 1.0.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
 MD5sum: 656ee63575e60b396392a850348fabf2
