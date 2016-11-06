@@ -31,40 +31,24 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 
 	os <- Sys.info()["sysname"]
 	if (os == "Windows") {
-		lp <- .libPaths()[grepl("Documents",.libPaths())]
-		# if (grepl("(Prog)|(PROG)", Sys.getenv("R_HOME"))) {
-		# 	rv <- paste(rv$major, rv$minor, sep = ".")
-		# 	cat(paste0("It seems you installed R in the Program Files directory.\nPlease uninstall R and re-install into C:\\R\\R-",rv),"\n\n")
-		# } else if (length(lp) > 0) {
-		# 	cat("Installing R-packages in the directory printed below often causes\nproblems on Windows. Please remove the 'Documents/R' directory,\nclose and restart R, and run the script again.\n\n")
-		# 	cat(paste0(lp, collapse = "\n"),"\n\n")
-		# } else {
 
-			build()
+		build()
 
-			if (!require("installr")) {
-			  install.packages("installr")
-			  library("installr")
-			}
+		if (!require("installr")) {
+		  install.packages("installr")
+		  library("installr")
+		}
 
-			installr::install.Rtools()
-			installr::install.git()
+		installr::install.Rtools()
+		installr::install.git()
 
-			## get rstudio - preview
-			page <- readLines("https://www.rstudio.com/products/rstudio/download/preview/", warn = FALSE)
-			pat <- "//s3.amazonaws.com/rstudio-dailybuilds/RStudio-[0-9.]+.exe"
-			URL <- paste0("https:",regmatches(page,regexpr(pat,page))[1])
-			# installr::install.URL(URL, installer_option = "/S")
-			installr::install.URL(URL)
+		## get putty for ssh
+		page <- readLines("http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html", warn = FALSE)
+		pat <- "//the.earth.li/~sgtatham/putty/latest/x86/putty-[0-9.]+-installer.msi"
+		URL <- paste0("http:",regmatches(page,regexpr(pat,page))[1])
+		installr::install.URL(URL)
 
-			## get putty for ssh
-			page <- readLines("http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html", warn = FALSE)
-			pat <- "//the.earth.li/~sgtatham/putty/latest/x86/putty-[0-9.]+-installer.msi"
-			URL <- paste0("http:",regmatches(page,regexpr(pat,page))[1])
-			installr::install.URL(URL)
-
-			cat("\n\nInstallation on Windows complete. Close R and start Rstudio\n\n")
-		# }
+		cat("\n\nInstallation on Windows complete. Close R and start Rstudio\n\n")
 	} else if (os == "Darwin") {
 
 		## from http://unix.stackexchange.com/a/712
@@ -76,18 +60,6 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 
 			build()
 
-			## get rstudio
-			##  based on https://github.com/talgalili/installr/blob/82bf5b542ce6d2ef4ebc6359a4772e0c87427b64/R/install.R#L805-L813
-			# page <- readLines("https://www.rstudio.com/ide/download/desktop", warn = FALSE)
-			# pat <- "//download1.rstudio.org/RStudio-[0-9.]+.dmg";
-			## get rstudio - preview
-
-		  # download.file("https://developer.apple.com/services-account/download?path=/Developer_Tools/Xcode_7.3.1/Xcode_7.3.1.dmg","Xcode.dmg")
-		  # system("open 'https://developer.apple.com/services-account/download?path=/Developer_Tools/Xcode_7.2.1/Xcode_7.2.1.dmg'")
-			# cat("Install Xcode. You may need to provide login information for your Apple account to get\nXcode. Download the file to a location of your choice and install it. When the install\nis complete open Xcode, go to Preferences > Downloads, and install the Command Line Tools")
-			# cat("Install Xcode. You will need to provide login information for your Apple account to get\nXcode. Download the file to a location of your choice and install it. When the install\nis complete open Xcode, go to Preferences > Downloads, and install the Command Line Tools")
-
-			# xc <- try(suppressWarnings(suppressMessages(system("xcode-select --install", intern = TRUE))), silent = TRUE)
 			xc <- system("xcode-select --install", ignore.stderr = TRUE)
 			if (xc == 1) {
 				cat("\n\nXcode command line tools are already installed\n\n")
@@ -106,19 +78,6 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 		    }
 			}
 
-			inp <- readliner("Type y to install Rstudio preview or n to stop the process: ")
-			if (grepl("[yY]", inp)) {
-				page <- readLines("https://www.rstudio.com/products/rstudio/download/preview/", warn = FALSE)
-				pat <- "//s3.amazonaws.com/rstudio-dailybuilds/RStudio-[0-9.]+.dmg"
-				URL <- paste0("https:",regmatches(page,regexpr(pat,page))[1])
-				download.file(URL,"Rstudio.dmg")
-				cat("\nDrag Rstudio.app to the applications folder\n")
-				system("open RStudio.dmg", wait = TRUE)
-				# system("sudo cp -R /Volumes/Rstudio/Rstudio.app /Applications", wait = TRUE)
-				# cp /Volumes/Rstudio /Applications and then close?
-				# path <- list.files("/Volumes", pattern = "RStudio*", full.names = TRUE)
-				# system(paste0("hdiutil unmount ", path))
-			}
 			cat("\n\nInstallation on Mac complete. Close R and start Rstudio\n\n")
 		}
 	} else {
