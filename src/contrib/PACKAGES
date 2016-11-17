@@ -734,13 +734,13 @@ MD5sum: a649c163822df679906ae83e2bd9c234
 NeedsCompilation: no
 
 Package: radiant.multivariate
-Version: 0.6.1
-Depends: R (>= 3.3.0), radiant.data (>= 0.6)
-Imports: shiny (>= 0.14), dplyr (>= 0.5), ggplot2 (>= 2.0.0), gridExtra (>= 2.0.0), scales (>= 0.4.0), magrittr (>= 1.5), psych (>= 1.6.6), car (>= 2.1.1), MASS (>= 7.3),
-                    wordcloud (>= 2.5), import (>= 1.1.0), Gmedian (>= 1.2.3), methods
+Version: 0.6.3
+Depends: R (>= 3.3.0), radiant.data (>= 0.6.10)
+Imports: radiant.model (>= 0.6.7), shiny (>= 0.14), dplyr (>= 0.5), ggplot2 (>= 2.0.0), gridExtra (>= 2.0.0), scales (>= 0.4.0), magrittr (>= 1.5), psych (>= 1.6.6), car (>=
+                    2.1.1), MASS (>= 7.3), wordcloud (>= 2.5), import (>= 1.1.0), Gmedian (>= 1.2.3), pryr (>= 0.1.2), methods
 Suggests: testthat (>= 1.0.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 06a94154ab97bef88d31ffb1fb7bc7d7
+MD5sum: 957324ba8a16a9216499340ebc5c8304
 NeedsCompilation: no
 
 Package: RColorBrewer

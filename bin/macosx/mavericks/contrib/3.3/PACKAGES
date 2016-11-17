@@ -679,13 +679,13 @@ License: AGPL-3 | file LICENSE
 MD5sum: c98d37c31735db56822f010d45da497d
 
 Package: radiant.multivariate
-Version: 0.6.1
-Depends: R (>= 3.3.0), radiant.data (>= 0.6)
-Imports: shiny (>= 0.14), dplyr (>= 0.5), ggplot2 (>= 2.0.0), gridExtra (>= 2.0.0), scales (>= 0.4.0), magrittr (>= 1.5), psych (>= 1.6.6), car (>= 2.1.1), MASS (>= 7.3),
-                    wordcloud (>= 2.5), import (>= 1.1.0), Gmedian (>= 1.2.3), methods
+Version: 0.6.3
+Depends: R (>= 3.3.0), radiant.data (>= 0.6.10)
+Imports: radiant.model (>= 0.6.7), shiny (>= 0.14), dplyr (>= 0.5), ggplot2 (>= 2.0.0), gridExtra (>= 2.0.0), scales (>= 0.4.0), magrittr (>= 1.5), psych (>= 1.6.6), car (>=
+                    2.1.1), MASS (>= 7.3), wordcloud (>= 2.5), import (>= 1.1.0), Gmedian (>= 1.2.3), pryr (>= 0.1.2), methods
 Suggests: testthat (>= 1.0.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 656ee63575e60b396392a850348fabf2
+MD5sum: 569352ccd1251cbbb0d07e51e87d50ee
 
 Package: RColorBrewer
 Version: 1.1-2
