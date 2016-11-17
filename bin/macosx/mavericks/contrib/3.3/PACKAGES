@@ -214,6 +214,15 @@ Enhances: sp
 License: GPL-2
 MD5sum: c540d79df6ac64a30f39257931ba4d80
 
+Package: gitgadget
+Version: 0.2.2
+Depends: R (>= 3.3.0)
+Imports: shiny (>= 0.14), miniUI (>= 0.1.1), rstudioapi (>= 0.6), curl (>= 0.9), jsonlite (>= 1.0),
+           dplyr (>= 0.5), methods
+Suggests: knitr, rmarkdown
+License: GPL-3
+MD5sum: 0fd9624692eda2e2ad82a158321e0ee4
+
 Package: Gmedian
 Version: 1.2.3
 Depends: R (>= 3.0.0)

@@ -247,7 +247,7 @@ Imports: shiny (>= 0.14), miniUI (>= 0.1.1), rstudioapi (>= 0.6), curl (>= 0.9),
            dplyr (>= 0.5), methods
 Suggests: knitr, rmarkdown
 License: GPL-3
-MD5sum: c494ffce7682ddaefaf81db741f8e883
+MD5sum: 513b072edd51fb528dd7ac63033191f4
 NeedsCompilation: no
 
 Package: Gmedian
