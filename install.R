@@ -72,8 +72,15 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 			cat("\nTo generate PDF reports in Radiant you will need MikTex. This is a large\ndownload (approx 100MB).\n")
 			inp <- readliner("Proceed with the install? Press y or n and then press return: ")
 			if (grepl("[yY]", inp)) {
-				ver <- if (grepl("64",Sys.getenv()["PROCESSOR_IDENTIFIER"])) 64 else 32
-				installr::install.miktex(ver)
+				# ver <- if (grepl("64",Sys.getenv()["PROCESSOR_IDENTIFIER"])) 64 else 32
+				# installr::install.miktex(ver)
+				if (grepl("64",Sys.getenv()["PROCESSOR_IDENTIFIER"])) {
+	 				URL <- "http://rady.ucsd.edu/faculty/directory/nijs/pub/docs/radiant/basic-miktex-2.9.6161-x64.exe"
+				} else {
+	 				URL <- "http://rady.ucsd.edu/faculty/directory/nijs/pub/docs/radiant/basic-miktex-2.9.6161.exe"
+				}
+
+				installr::install.URL(URL)
 			}
 			cat("\n\nInstallation on Windows complete. Close R, start Rstudio, and select Radiant\nfrom the Addins menu to get started\n\n")
 		}
