@@ -5,6 +5,7 @@
 # repos <- "https://cloud.r-project.org"
 repos <- c("https://radiant-rstats.github.io/minicran/", "https://cloud.r-project.org")
 options(repos = c(CRAN = repos))
+# install.packages("radiant.data")
 
 #install.packages("devtools")
 library(devtools)
@@ -12,7 +13,7 @@ library(devtools)
 library(miniCRAN)
 
 pth <- "~/gh/minicran"
-pkgs = c("webshot")
+pkgs = c("radiant.data")
 
 # building minicran for source packages
 pkgList <- pkgDep(pkgs, repos = repos, type = "source", suggests = FALSE)
@@ -31,6 +32,9 @@ library(magrittr)
 
 pdirs <- c("src/contrib", "bin/windows/contrib/3.3", "bin/macosx/mavericks/contrib/3.3")
 
+
+## still doesn't always give the correct result! Fix!
+
 for(pdir in pdirs) {
   list.files(file.path(pth, pdir)) %>%
     data.frame(fn = ., stringsAsFactors=FALSE) %>%
@@ -39,7 +43,7 @@ for(pdir in pdirs) {
     group_by(pkg_name) %>%
     arrange(desc(pkg_version)) %>%
     summarise(old = n(), pkg_file_new = first(pkg_file), pkg_file_old = last(pkg_file)) %>%
-    filter(old > 1) %T>% print -> old
+    filter(old > 1) %T>% print(n = 100) -> old
 
   if(nrow(old) > 0) {
     for(pf in old$pkg_file_old) {
