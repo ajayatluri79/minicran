@@ -741,12 +741,12 @@ MD5sum: c4500bfa0337847ad7896a05542f678c
 NeedsCompilation: no
 
 Package: radiant.design
-Version: 0.7
+Version: 0.7.1
 Depends: R (>= 3.3.0), radiant.data (>= 0.7), mvtnorm
 Imports: dplyr (>= 0.5), shiny (>= 0.14), AlgDesign (>= 1.1.7.3), import (>= 1.1.0), polycor, methods
 Suggests: testthat (>= 1.0.0),
 License: AGPL-3 | file LICENSE
-MD5sum: 06387471fbc947c9a80109c23a61913f
+MD5sum: 94c864c06df635da22f9b8cba41f1917
 NeedsCompilation: no
 
 Package: radiant.model

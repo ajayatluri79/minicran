@@ -694,12 +694,12 @@ License: AGPL-3 | file LICENSE
 MD5sum: 7325f903b6d51112665d2b9b34c8a44d
 
 Package: radiant.design
-Version: 0.7
+Version: 0.7.1
 Depends: R (>= 3.3.0), radiant.data (>= 0.7), mvtnorm
 Imports: dplyr (>= 0.5), shiny (>= 0.14), AlgDesign (>= 1.1.7.3), import (>= 1.1.0), polycor, methods
 Suggests: testthat (>= 1.0.0),
 License: AGPL-3 | file LICENSE
-MD5sum: 6a86e29b006fc3f272a527f022b2db64
+MD5sum: 5b2f75dd86c8913e8423d259805d804a
 
 Package: radiant.model
 Version: 0.6.7
