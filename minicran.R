@@ -13,7 +13,7 @@ library(devtools)
 library(miniCRAN)
 
 pth <- "~/gh/minicran"
-pkgs = c("radiant.data")
+pkgs = c("knitr")
 
 # building minicran for source packages
 pkgList <- pkgDep(pkgs, repos = repos, type = "source", suggests = FALSE)
@@ -32,18 +32,21 @@ library(magrittr)
 
 pdirs <- c("src/contrib", "bin/windows/contrib/3.3", "bin/macosx/mavericks/contrib/3.3")
 
-
 ## still doesn't always give the correct result! Fix!
-
 for(pdir in pdirs) {
-  list.files(file.path(pth, pdir)) %>%
+  old <- list.files(file.path(pth, pdir)) %>%
     data.frame(fn = ., stringsAsFactors=FALSE) %>%
     mutate(pkg_file = fn, pkg_name = strsplit(fn, "_") %>% sapply("[",1),
     			 pkg_version = strsplit(fn, "_") %>% sapply("[",2) %>% gsub("(.zip)|(.tar.gz)|(.tgz)","",.)) %>%
+    filter(!is.na(pkg_version))
+    # group_by(pkg_name) %>%
+    # arrange(desc(package_version(pkg_version)))
+  old <- old[order(old$pkg_name, package_version(old$pkg_version)), ]
+  old <- old %>%
     group_by(pkg_name) %>%
-    arrange(desc(pkg_version)) %>%
-    summarise(old = n(), pkg_file_new = first(pkg_file), pkg_file_old = last(pkg_file)) %>%
-    filter(old > 1) %T>% print(n = 100) -> old
+    # summarise(old = n(), pkg_file_new = first(pkg_file), pkg_file_old = last(pkg_file)) %>%
+    summarise(old = n(), pkg_file_new = last(pkg_file), pkg_file_old = first(pkg_file)) %>%
+    filter(old > 1) %T>% print(n = 100)
 
   if(nrow(old) > 0) {
     for(pf in old$pkg_file_old) {

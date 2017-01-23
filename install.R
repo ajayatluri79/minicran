@@ -61,8 +61,10 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 				URL <- "http://rady.ucsd.edu/faculty/directory/nijs/pub/docs/radiant/7z1602.exe"
 				installr::install.URL(URL)
 				if (file.exists(file.path(Sys.getenv("ProgramFiles"), "7-Zip"))) {
+				  ## removes path settings!!
 					shell(paste0("setx PATH \"", paste0(Sys.getenv("ProgramFiles"), "\\7-Zip\"")))
 				} else if (file.exists(file.path(Sys.getenv("ProgramFiles(x86)"), "7-Zip"))) {
+				  ## removes path settings!!
 					shell(paste0("setx PATH \"", paste0(Sys.getenv("ProgramFiles(x86)"), "\\7-Zip\"")))
 				} else {
 					cat("Couldn't find the location where 7-zip was installed. Update the system path manually\n")
