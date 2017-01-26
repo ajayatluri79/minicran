@@ -723,7 +723,7 @@ Depends: R (>= 3.3.0), radiant.data (>= 0.7.1), radiant.design (>= 0.7.1), radia
 Imports: psych (>= 1.6.6), AlgDesign (>= 1.1.7.3), shiny (>= 0.14), import (>= 1.1.0)
 Suggests: testthat (>= 1.0.0), covr (>= 1.2.0), knitr, rmarkdown
 License: AGPL-3 | file LICENSE
-MD5sum: 137a55641140e8ff0fbd5848124d81f5
+MD5sum: b88c88631f1a90f7c21f839b76c54f48
 NeedsCompilation: no
 
 Package: radiant.basics
@@ -733,7 +733,7 @@ Imports: ggplot2 (>= 2.0.0), gridExtra (>= 2.0.0), scales (>= 0.4.0), dplyr (>= 
                     methods
 Suggests: testthat (>= 1.0.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 854909016e003019ab229e23fd0212d0
+MD5sum: 59f968da96cb5432352930059b899807
 NeedsCompilation: no
 
 Package: radiant.data
@@ -744,7 +744,7 @@ Imports: tibble (>= 1.2), broom (>= 0.4.1), car (>= 2.1.3), grid (>= 3.3.1), gri
                     import (>= 1.1.0), feather (>= 0.3), base64enc, methods
 Suggests: testthat (>= 1.0.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
-MD5sum: e763a49fb20e0ad47a9652988ecc1710
+MD5sum: ddf79884b0a01a5d3e26f355bb6b5102
 NeedsCompilation: no
 
 Package: radiant.design
@@ -753,7 +753,7 @@ Depends: R (>= 3.3.0), radiant.data (>= 0.7), mvtnorm
 Imports: dplyr (>= 0.5), shiny (>= 0.14), AlgDesign (>= 1.1.7.3), import (>= 1.1.0), polycor, methods
 Suggests: testthat (>= 1.0.0),
 License: AGPL-3 | file LICENSE
-MD5sum: ed6e3950f73613b2756f1dfe60276873
+MD5sum: fa4102d81241926f87621ac61c50d086
 NeedsCompilation: no
 
 Package: radiant.model
@@ -764,7 +764,7 @@ Imports: radiant.basics (>= 0.6.3), shiny (>= 0.14), nnet (>= 7.3.12), NeuralNet
                     DiagrammeR(>= 0.9.0), import (>= 1.1.0), psych (>= 1.6.6), e1071 (>= 1.6.7), rpart (>= 4.1.10), methods
 Suggests: testthat (>= 1.0.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 6761105c2e99e85fdb7c5d470799c0ad
+MD5sum: f4dd7263cfc704531ddef37baea2be9f
 NeedsCompilation: no
 
 Package: radiant.multivariate
@@ -774,7 +774,7 @@ Imports: radiant.model (>= 0.6.7), shiny (>= 0.14), dplyr (>= 0.5), ggplot2 (>= 
                     2.1.1), MASS (>= 7.3), wordcloud (>= 2.5), import (>= 1.1.0), Gmedian (>= 1.2.3), pryr (>= 0.1.2), methods
 Suggests: testthat (>= 1.0.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
-MD5sum: e54998b5480417d869952bfeb08b4183
+MD5sum: 163859c9eb9bdec6285fc77a05d9ee73
 NeedsCompilation: no
 
 Package: RColorBrewer
