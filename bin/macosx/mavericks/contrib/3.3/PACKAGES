@@ -714,7 +714,7 @@ License: AGPL-3 | file LICENSE
 MD5sum: e16214c74a68d085516f7b85ce1e123e
 
 Package: radiant.data
-Version: 0.7.1
+Version: 0.7.3
 Depends: R (>= 3.3.0), magrittr (>= 1.5), ggplot2 (>= 2.1.0), lubridate (>= 1.6.0), tidyr (>= 0.6), dplyr
            (>= 0.5)
 Imports: tibble (>= 1.2), broom (>= 0.4.1), car (>= 2.1.3), grid (>= 3.3.1), gridExtra (>= 2.0.0), knitr
@@ -724,7 +724,7 @@ Imports: tibble (>= 1.2), broom (>= 0.4.1), car (>= 2.1.3), grid (>= 3.3.1), gri
            methods
 Suggests: testthat (>= 1.0.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
-MD5sum: f6976047d94b2e7262e4ed5483708df1
+MD5sum: cc235a28de25230eac149f2cf790de82
 
 Package: radiant.design
 Version: 0.7.1
@@ -735,7 +735,7 @@ License: AGPL-3 | file LICENSE
 MD5sum: 7ad16dbeb30cf753c6bac805e8d8db1f
 
 Package: radiant.model
-Version: 0.7
+Version: 0.7.1
 Depends: R (>= 3.3.0), radiant.data (>= 0.6.10)
 Imports: radiant.basics (>= 0.6.3), shiny (>= 0.14), nnet (>= 7.3.12), NeuralNetTools (>= 1.4.0), sandwich
            (>= 2.3.4), car (>= 2.1.3), ggplot2 (>= 2.1.0), gridExtra (>= 2.0.0), data.tree (>= 0.4.0),
@@ -744,7 +744,7 @@ Imports: radiant.basics (>= 0.6.3), shiny (>= 0.14), nnet (>= 7.3.12), NeuralNet
            e1071 (>= 1.6.7), rpart (>= 4.1.10), methods
 Suggests: testthat (>= 1.0.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 38cdc201945c940a8a3a722cb6c9f43c
+MD5sum: 4ec27d2503ef3969cb54869c0bb52173
 
 Package: radiant.multivariate
 Version: 0.7
