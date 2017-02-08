@@ -62,12 +62,14 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 				installr::install.URL(URL)
 				if (file.exists(file.path(Sys.getenv("ProgramFiles"), "7-Zip"))) {
 				  ## removes path settings!!
-					shell(paste0("setx PATH \"", paste0(Sys.getenv("ProgramFiles"), "\\7-Zip\"")))
+					# shell(paste0("setx PATH \"", paste0(Sys.getenv("ProgramFiles"), "\\7-Zip\"")))
+					shell(paste0("setx PATH \"%PATH%;", paste0(Sys.getenv("ProgramFiles"), "\\7-Zip\"")))
 				} else if (file.exists(file.path(Sys.getenv("ProgramFiles(x86)"), "7-Zip"))) {
 				  ## removes path settings!!
-					shell(paste0("setx PATH \"", paste0(Sys.getenv("ProgramFiles(x86)"), "\\7-Zip\"")))
+					# shell(paste0("setx PATH \"", paste0(Sys.getenv("ProgramFiles(x86)"), "\\7-Zip\"")))
+					shell(paste0("setx PATH \"%PATH%;", paste0(Sys.getenv("ProgramFiles(x86)"), "\\7-Zip\"")))
 				} else {
-					cat("Couldn't find the location where 7-zip was installed. Update the system path manually\n")
+					cat("Couldn't find the location where 7-zip was installed. Please update the system path manually\n")
 				}
 			}
 
