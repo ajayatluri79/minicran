@@ -775,7 +775,7 @@ Imports: radiant.model (>= 0.6.7), shiny (>= 0.14), dplyr (>= 0.5), ggplot2 (>=
          0.1.2), methods
 Suggests: testthat (>= 1.0.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 75202c708d0665921cd2b83527e4c911
+MD5sum: f7fa2582cd69c096d114bc935f98c1a4
 
 Package: RColorBrewer
 Version: 1.1-2
