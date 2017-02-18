@@ -809,7 +809,7 @@ Imports: radiant.basics (>= 0.7.1), shiny (>= 0.14), nnet (>= 7.3.12),
          1.1.0), psych (>= 1.6.6), e1071 (>= 1.6.7), rpart (>= 4.1.10), methods
 Suggests: testthat (>= 1.0.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 2697790819183a5dbebbfaafec253237
+MD5sum: ebf85af319ebc88e70e741ef7ae8da10
 NeedsCompilation: no
 
 Package: radiant.multivariate
