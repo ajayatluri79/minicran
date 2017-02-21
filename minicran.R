@@ -13,7 +13,7 @@ library(devtools)
 library(miniCRAN)
 
 pth <- "~/gh/minicran"
-pkgs = c("radiant")
+pkgs = c("caret")
 
 # building minicran for source packages
 pkgList <- pkgDep(pkgs, repos = repos, type = "source", suggests = FALSE)
