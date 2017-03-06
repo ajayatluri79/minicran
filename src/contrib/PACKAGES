@@ -797,7 +797,7 @@ Imports: radiant.basics (>= 0.7.1), shiny (>= 0.14), nnet (>= 7.3.12), NeuralNet
                 rpart (>= 4.1.10), methods
 Suggests: testthat (>= 1.0.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 0e09cffb3cd4fa24c1f51bb82aa1e273
+MD5sum: adfbe496b130d8e3fc770f37bd9c5d33
 NeedsCompilation: no
 
 Package: radiant.multivariate
