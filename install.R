@@ -57,16 +57,13 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 			wz <- suppressWarnings(system("where R", intern = TRUE))
 			w7z <- suppressWarnings(system("where 7z", intern = TRUE))
 			if (!grepl("zip", wz) && !grepl("7-Zip", w7z)) {
-				# installr::install.7zip()
 				URL <- "http://rady.ucsd.edu/faculty/directory/nijs/pub/docs/radiant/7z1602.exe"
 				installr::install.URL(URL)
 				if (file.exists(file.path(Sys.getenv("ProgramFiles"), "7-Zip"))) {
-				  ## removes path settings!!
-					# shell(paste0("setx PATH \"", paste0(Sys.getenv("ProgramFiles"), "\\7-Zip\"")))
+				  ## update path
 					shell(paste0("setx PATH \"%PATH%;", paste0(Sys.getenv("ProgramFiles"), "\\7-Zip\"")))
 				} else if (file.exists(file.path(Sys.getenv("ProgramFiles(x86)"), "7-Zip"))) {
-				  ## removes path settings!!
-					# shell(paste0("setx PATH \"", paste0(Sys.getenv("ProgramFiles(x86)"), "\\7-Zip\"")))
+				  ## update path
 					shell(paste0("setx PATH \"%PATH%;", paste0(Sys.getenv("ProgramFiles(x86)"), "\\7-Zip\"")))
 				} else {
 					cat("Couldn't find the location where 7-zip was installed. Please update the system path manually\n")
@@ -76,8 +73,6 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
 			cat("\nTo generate PDF reports in Radiant you will need MikTex. This is a large\ndownload (approx 100MB).\n")
 			inp <- readliner("Proceed with the install? Press y or n and then press return: ")
 			if (grepl("[yY]", inp)) {
-				# ver <- if (grepl("64",Sys.getenv()["PROCESSOR_IDENTIFIER"])) 64 else 32
-				# installr::install.miktex(ver)
 				if (grepl("64",Sys.getenv()["PROCESSOR_IDENTIFIER"])) {
 	 				URL <- "http://rady.ucsd.edu/faculty/directory/nijs/pub/docs/radiant/basic-miktex-2.9.6161-x64.exe"
 				} else {

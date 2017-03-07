@@ -13,7 +13,7 @@ library(devtools)
 library(miniCRAN)
 
 pth <- "~/gh/minicran"
-pkgs = c("caret")
+pkgs = c("radiant")
 
 # building minicran for source packages
 pkgList <- pkgDep(pkgs, repos = repos, type = "source", suggests = FALSE)
@@ -47,7 +47,7 @@ for(pdir in pdirs) {
 
   if(nrow(old) > 0) {
     for(pf in old$pkg_file_old) {
-    	unlink(file.path(pth, pdir, pf))
+    	# unlink(file.path(pth, pdir, pf))
     }
   }
 }
