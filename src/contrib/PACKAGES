@@ -780,7 +780,7 @@ Depends: R (>= 3.3.0), radiant.data (>= 0.7.10), mvtnorm
 Imports: dplyr (>= 0.5), shiny (>= 0.14), AlgDesign (>= 1.1.7.3), import (>= 1.1.0), polycor, methods
 Suggests: testthat (>= 1.0.0),
 License: AGPL-3 | file LICENSE
-MD5sum: e4f95558e170bbc35c4c755127c4d8ce
+MD5sum: 8fe633e28ccdabd91b2a3aa1171feb5c
 NeedsCompilation: no
 
 Package: radiant.model
