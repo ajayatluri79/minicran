@@ -764,14 +764,14 @@ MD5sum: 791d6bfc6aee7075932ce59c4813c3c9
 NeedsCompilation: no
 
 Package: radiant.data
-Version: 0.7.19
+Version: 0.7.20
 Depends: R (>= 3.3.0), magrittr (>= 1.5), ggplot2 (>= 2.1.0), lubridate (>= 1.6.0), tidyr (>= 0.6), dplyr (>= 0.5)
 Imports: tibble (>= 1.2), broom (>= 0.4.1), car (>= 2.1.3), grid (>= 3.3.1), gridExtra (>= 2.0.0), knitr (>= 1.14), rmarkdown(>= 1.0), markdown (>= 0.7.7), pryr (>= 0.1.2), shiny
                     (>= 0.14), jsonlite (>= 1.0), shinyAce (>= 0.2.1), psych (>= 1.6.6), DT (>= 0.2), readr (>= 1.0.0), scales (>= 0.4.0), curl (>= 1.1.0), rstudioapi (>= 0.6),
                     import (>= 1.1.0), feather (>= 0.3), base64enc, methods
 Suggests: testthat (>= 1.0.0), covr (>= 1.2.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 726fca4e48ea8d76a33cfea94064c5f0
+MD5sum: 8ced39ff9429b3dc6a34beacbf644d50
 NeedsCompilation: no
 
 Package: radiant.design
